@@ -7,23 +7,27 @@
     "test": "lightouse",
     "bump": "npm version patch",
     "build": "yarn build-css && yarn build-js",
-    "create-css-folder": "mkdir static/styles",
+    "create-css-folder": "mkdirp static/styles",
     "build-css": "yarn create-css-folder && node-sass sass/ -o static/styles",
     "build-js": "rollup -c rollup.config.production.js",
-    "watch": "parallelshell \"yarn watch-css\" \"yarn watch-js\"",
+    "watch": "parallelshell \"yarn watch-css\" \"yarn watch-js\" \"yarn start\"",
     "watch-css": "yarn create-css-folder && node-sass -w sass/ -o static/styles",
     "watch-js": "rollup -wc rollup.config.js",
     "optimize-images": "imageoptim -d static/images",
-    "release": "yarn optimize-image && yarn build && yarn bump"
+    "release": "yarn optimize-image && yarn build && yarn bump",
+    "start": "node server.js"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2"
+    "adaro": "^1.0.4",
+    "express": "^4.15.2",
+    "mz": "^2.6.0"
   },
   "devDependencies": {
     "imageoptim-cli": "^1.14.9",
+    "mkdirp": "^0.5.1",
     "node-sass": "^4.5.2",
     "parallelshell": "^2.0.0",
     "rollup": "^0.41.6",
