@@ -2,21 +2,23 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import filesize from 'rollup-plugin-filesize';
 import progress from 'rollup-plugin-progress';
-//import hash from 'rollup-plugin-hash'; // production
-//import cleanup from 'rollup-plugin-cleanup'; // production
-//import replace from 'rollup-plugin-replace'; // production
+import hash from 'rollup-plugin-hash'; // production
+import cleanup from 'rollup-plugin-cleanup'; // production
 
 export default {
   entry: 'scripts/app.js',
   dest: 'static/scripts/bundle.js',
   format: 'cjs',
   plugins: [
+    cleanup(),
     resolve(),
     babel({
       exclude: 'node_modules/**'
     }),
+    hash(),
     filesize(),
-    progress()
+    progress(),
+
   ],
   sourceMap: true
 };
