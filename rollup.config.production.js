@@ -20,7 +20,7 @@ export default {
     progress(),
 
   ],
-  sourceMap: true
+  sourceMap: false
 };
 
 // if you do not use rollup with gulp

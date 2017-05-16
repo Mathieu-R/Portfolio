@@ -24,6 +24,14 @@ app.engine('dust', adaro.dust(options));
 app.set('view engine', 'dust');
 app.set('views', templatePath);
 
+app.get('/', (req, res) => {
+  res.status(200).render('home', {
+    title: Portfolio,
+    styles: [path.join(staticPath, 'styles', 'ptf.css')],
+    scripts: [path.join(staticPath, 'scripts', 'build.js')]
+  });
+});
+
 app.get('/check', res => res.send('server ok.'));
 
 http.createServer(app).listen(port, () => {

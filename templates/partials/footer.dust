@@ -1,0 +1,9 @@
+  <footer>
+    <div class="copyright">© Mathieu Rousseau</div>
+  </footer>
+
+  {#scripts}
+    <script async src="."></script>
+  {/scripts}
+</body>
+</html>

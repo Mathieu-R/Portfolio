@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>{title}</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Mathieu Rousseau">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <meta name="theme-color" content="#304FFE">
+
+  <link rel="icon" href="/static/images/icon@256.png">
+  <link rel="manifest" href="/static/manifest.json">
+
+  {#css}
+    <link rel="stylesheet" href=".">
+  {/css}
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <ul class="nav-content">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="/activities">Activités</a></li>
+        <li><a href="/projects">Projets</a></li>
+        <li><a href="/learning">Apprentissage</a></li>
+      </ul>
+    </nav>
+  </header>
