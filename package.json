@@ -10,7 +10,7 @@
     "create-css-folder": "mkdirp static/styles",
     "build-css": "yarn create-css-folder && node-sass sass/ -o static/styles",
     "build-js": "rollup -c rollup.config.production.js",
-    "watch": "parallelshell \"yarn watch-css\" \"yarn watch-js\" \"yarn start\"",
+    "watch": "parallelshell \"yarn watch-css\" \"yarn watch-js\"",
     "watch-css": "yarn create-css-folder && node-sass -w sass/ -o static/styles",
     "watch-js": "rollup -wc rollup.config.js",
     "optimize-images": "imageoptim -d static/images",
