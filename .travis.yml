@@ -1,0 +1,10 @@
+notifications:
+  email: false
+sudo: required
+language: node_js
+node_js:
+  - "7.8"
+before_script:
+  - node server.js
+script:
+  - npm run release
