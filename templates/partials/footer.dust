@@ -3,7 +3,7 @@
   </footer>
 
   {#scripts}
-    <script async src="."></script>
+    <script async src={.}></script>
   {/scripts}
 </body>
 </html>

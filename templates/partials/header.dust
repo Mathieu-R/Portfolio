@@ -9,9 +9,9 @@
   <link rel="icon" href="/static/images/icon@256.png">
   <link rel="manifest" href="/static/manifest.json">
 
-  {#css}
-    <link rel="stylesheet" href=".">
-  {/css}
+  {#styles}
+    <link rel="stylesheet" href={.}>
+  {/styles}
 </head>
 
 <body>
