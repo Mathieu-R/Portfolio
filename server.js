@@ -19,10 +19,14 @@ const options = {
 };
 
 app.use(compression());
-app.use(serveStatic(staticPath, {
+app.use('/static', serveStatic(staticPath, {
   maxAge: production ? (365 * 24 * 60 * 60 * 1000) : 0
 }));
 
+app.use('/sw.js', serveStatic(swPath, {
+  maxAge: 0 // never cache the service-worker
+}));
+  
 app.engine('dust', adaro.dust(options));
 app.set('view engine', 'dust');
 app.set('views', templatePath);
