@@ -5,8 +5,8 @@ language: node_js
 node_js:
   - "7.8"
 before_script:
-  - npm install --global lighthouse
-  - lighthouse --output=json --output-path=./lighthouse.json localhost:3000
   - npm run release
+  - npm install -g lighthouse
+  - npm run start
 script:
-  - npm run release
+  - lighthouse --output=json --output-path=./validator/lighthouse.json localhost:3000
