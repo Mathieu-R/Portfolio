@@ -1,3 +1,6 @@
 node_modules
 .DS_Store
 dist
+static/styles
+static/scripts/bundle.js
+static/scripts/bundle.js.map

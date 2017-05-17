@@ -1,3 +1,8 @@
 'use strict';
 
-//# sourceMappingURL=bundle.js.map
+class App {
+  constructor() {
+    console.log('Porfolio.');
+  }
+}
+window.addEventListener('load', _ => new App());
