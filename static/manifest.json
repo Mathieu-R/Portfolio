@@ -1,6 +1,6 @@
 {
   "name": "Portfolio",
-  "short_name": "Math-PTF",
+  "short_name": "PTF",
   "icons": [{
     "src": "/static/images/icon@256.png",
     "sizes": "256x256",
@@ -10,5 +10,5 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FAFAFA",
-  "theme_color": "##1736b2"
+  "theme_color": "#1736b2"
 }
