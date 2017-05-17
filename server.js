@@ -1,6 +1,8 @@
 const http = require('http');
 const path = require('path');
 const fs = require('mz/fs');
+const serveStatic = require('serve-static');
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const adaro = require('adaro');
@@ -16,7 +18,8 @@ const options = {
   helpers: []
 };
 
-app.use(express.static(staticPath, {
+app.use(compression());
+app.use(serveStatic(staticPath, {
   maxAge: production ? (365 * 24 * 60 * 60 * 1000) : 0
 }));
 
