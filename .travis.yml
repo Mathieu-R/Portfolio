@@ -5,8 +5,9 @@ language: node_js
 node_js:
   - "7.8"
 before_script:
-  - npm run release
+  - npm install -g imageoptim-cli
   - npm install -g lighthouse
+  - npm run release
   - npm run start
 script:
   - lighthouse --output=json --output-path=./validator/lighthouse.json localhost:3000
