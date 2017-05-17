@@ -10,6 +10,7 @@ const adaro = require('adaro');
 const production = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 3000;
 const staticPath = './static';
+const swPath = './service-worker.js';
 const templatePath = './templates';
 
 const options = {
