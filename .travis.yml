@@ -11,3 +11,4 @@ before_script:
   - npm run start
 script:
   - lighthouse --output=json --output-path=./validator/lighthouse.json localhost:3000
+  - node ./validator/validator.js ./validator/lighthouse.json
