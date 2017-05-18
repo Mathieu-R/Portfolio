@@ -3,7 +3,7 @@
   </footer>
 
   {#scripts}
-    <script async src="{@hash path=.}{/hash}"></script>
+    <script async src="{.|hash}"></script>
   {/scripts}
 </body>
 </html>
