@@ -24,17 +24,18 @@ function createHash(content) {
 }
 
 function hash(dust) {
-  dust.helpers.hash = (chunk, content, bodies, params) => {
-    return chunk.map(chk => { // each request
+  dust.helpers.hash = (chunk, context, bodies, params) => {
+    //return chunk.map(chk => { // each request
       const path = params.path;
       readfile(path)
         .then(content => createHash(content))
         .then(hash => {
           const hashedUrl = path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`);
-          return chunk.write(hashedUrl).end();
+          //console.log(hashedUrl);
+          return chunk.write(hashedUrl);
         })
         .catch(error => new Error(error.message));
-    });
+    //});
   }
 }
 

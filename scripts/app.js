@@ -1,9 +1,8 @@
-import {installServiceWorker} from './sw-install.js';
+import {serviceWorkerInstall} from './sw-install.js';
 
 class App {
   constructor() {
-    console.log('Porfolio.');
-    installServiceWorker();
+    serviceWorkerInstall();
   }
 }
 
