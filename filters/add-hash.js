@@ -21,10 +21,9 @@ function createHash(content) {
 
 function hash(dust) {
   dust.filters.hash = path => {
-    return readfile(path)
-      .then(content => createHash(content))
-      .then(hash => path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`))
-      .catch(error => console.log(error));
+    const content = await readfile(path);
+    const hash = createHash(content);
+    return path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`);
   }
 }
 
