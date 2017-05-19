@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Supercharged",
+    "image": "",
+    "url": "",
+    "description": "",
+    "learned": "",
+    "tags": "Web Development", "Javascript", "ES2015", "Custome Elements", "Performance" 
+  },
+  {
+    "title": "Google Web Fondamentals",
+    "image": "",
+    "url": "",
+    "description": "",
+    "learned": "",
+    "tags": "Web Development", "Javascript", "ES2015", "Custome Elements", "Performance" 
+  },
+  {
+    "title": "Conferences",
+    "image": "",
+    "url": "",
+    "description": "",
+    "learned": "",
+    "tags": "Web Development", "Javascript", "ES2015", "Custome Elements", "Performance" 
+  },
+  {
+    "title": "Grafikart",
+    "image": "",
+    "url": "",
+    "description": "De son vrai nom, Jonathan Boyer, Grafikart est un jeune développeur 'Freelance', fort de ses 10 ans d'expérience, il nous apprend avec simplicité et efficacité le développement Web du front end au back end",
+    "learned": "Une de mes premières sources d'apprentissage (après OpenClassroom), il m'a appris les rudiments du développement Web mais égalements des notions bien plus avancées. J'ai notamment appris le language Ruby (et Ruby on Rails pour le Web), comment utiliser docker et docker-compose, quelques notions d'administration système mais égalements certains frameworks tels qu'AngularJS et VueJS. I lest sûrement l'un des premiers à m'avoir fait aimer le développement Web.",
+    "tags": "Web Development"
+  },
+  {
+    "title": "Rust",
+    "image": "",
+    "url": "https://www.rust-lang.org/fr-FR/",
+    "description": "\"Rust est un langage de programmation système ultra-rapide, qui prévient les erreurs de segmentation et garantit la sûreté entre threads.\"",
+    "learned": "",
+    "tags": "System"
+  }
+]
