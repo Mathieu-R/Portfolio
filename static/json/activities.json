@@ -2,35 +2,35 @@
   {
     "title": "Défense des projets d'intégrations (3TI)",
     "description": "J'ai eu l'occasion de pouvoir assister à la défense des projets d'intégrations des 3TI à l'Axis Park, Louvain-La-Neuve. Ces projets visent à intégrer plusieurs cours",
-    "slugs": ["Integration Project", "3TI", "Yep"],
+    "tags": ["Integration Project", "3TI", "Yep"],
     "startDate": "2016-12-13",
     "endDate": "2016-12-13"
   },
   {
     "title": "Semaine Internationale Makers",
     "description": "Réalisation d'un prototype servant à améliorer le quotidien d'une personne à mobilité réduite. Ce projet s'est réalisé en groupe mélangeant TI et Market.",
-    "slugs": ["Internation Week", "Creativity", "Marketing"],
+    "tags": ["Internation Week", "Creativity", "Marketing"],
     "startDate": "2017-03-27",
     "endDate": "2017-03-30"
   },
   {
     "title": "Formation C# - Base",
     "description": "Formation",
-    "slugs": ["Development", "C#", "Technofutur"],
+    "tags": ["Development", "C#", "Technofutur"],
     "startDate": "2017-04-10",
     "endDate": "2017-04-14"
   },
   {
     "title": "Formation T-SQL et Administration SQL",
     "description": "",
-    "slugs": ["Development", "SQL", "Technofutur"],
+    "tags": ["Development", "SQL", "Technofutur"],
     "startDate": "2017-06-26",
     "endDate": "2017-06-30"
   },
   {
     "title": "Formation Java - Avancé",
     "description": "",
-    "slugs": ["Development", "Java", "Technofutur"],
+    "tags": ["Development", "Java", "Technofutur"],
     "startDate": "2017-07-31",
     "endDate": "2017-08-04"
   }
