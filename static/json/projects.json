@@ -22,7 +22,7 @@
   },
   {
     "title": "WebIRC",
-    "description" "Chat IRC",
+    "description": "Chat IRC",
     "tags": ["AngularJS", "NodeJS", "WebSockets"],
     "group": ["Julien Castiaux: https://github.com/julien00859"],
     "status": "DONE"
