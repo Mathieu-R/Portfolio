@@ -19,7 +19,7 @@ function createHash(content) {
       .digest('hex');
 }
 
-function hash(dust) {
+async function hash(dust) {
   dust.filters.hash = path => {
     const content = await readfile(path);
     const hash = createHash(content);
