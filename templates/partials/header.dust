@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#304FFE">
 
   <link rel="icon" href="/static/images/icon@256.png">
-  <link rel="manifest" href="{"/static/manifest.json"|hash}">
+  <link rel="manifest" href={@hash path="static/manifest.json"}{/hash}>
 
   {#styles}
-    <link rel="stylesheet" href={.|hash}>
+    <link rel="stylesheet" href={@hash path=.}{/hash}>
   {/styles}
 </head>
 

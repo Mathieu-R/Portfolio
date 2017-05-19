@@ -15,7 +15,7 @@
     "watch-js": "rollup -wc rollup.config.js",
     "optimize-images": "imageoptim -d static/images",
     "release": "yarn optimize-images && yarn build && yarn bump",
-    "start": "nodeman --inspect server.js"
+    "start": "nodemon --inspect server.js"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",
@@ -23,7 +23,8 @@
   "dependencies": {
     "adaro": "^1.0.4",
     "express": "^4.15.2",
-    "mz": "^2.6.0"
+    "mz": "^2.6.0",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {
     "compression": "^1.6.2",
