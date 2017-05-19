@@ -13,24 +13,18 @@ function readfile(path) {
 }
 
 function createHash(content) {
-  const hash = crypto
+  return crypto
       .createHash('sha256')
       .update(content)
       .digest('hex');
-  return hash;
 }
 
 function hash(dust) {
   dust.filters.hash = path => {
-    const filtre = readfile(path)
+    return readfile(path)
       .then(content => createHash(content))
-      .then(hash => {
-        const hashedUrl = path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`);
-        console.log('hash', hashedUrl)
-        return hashedUrl;
-      })
-      .catch(error => new Error(error.message));
-    console.log(filtre);
+      .then(hash => path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`))
+      .catch(error => console.log(error));
   }
 }
 

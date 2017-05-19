@@ -18,7 +18,7 @@ const options = {
   cache: production ? true : false,
   whitespace: production ? false : true,
   helpers: [
-    require('./helpers/add-hash')
+    require('./filters/add-hash')
   ]
 };
 
