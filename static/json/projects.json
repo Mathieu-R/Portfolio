@@ -1,6 +1,41 @@
 [
   {
     "title": "Agenda-Rails",
+    "description": "Agenda disponible sans authentification (pour la simplicité), il suffit simplement d'entrer son nom et ensuite de noter des rendez-vous et de les tagger selon leurs niveux d'importance.",
+    "tags": ["VueJS", "Ruby on Rails"]
+    "status": "DONE"
+  },
+  {
+    "title": "Progressive Web Poll",
     "description": "Agenda"
+    "tags": ["Service Worker", "NodeJS", "MongoDB", "Angular 4"]
+    "status": "IN DEVELOPPMENT"
+  },
+  {
+    "title": "E-Portfolio",
+    "description": "Le site sur lequelle vous vous trouvez. Il fut l'occasion d'implémenter tout ce que j'ai appris ou voulais apprendre (Server Side Rendering, Service Workers, Cache,...)."
+    "tags": ["Service Worker", "NodeJS", "Server Side Rendering"],
+    "status": "IN DEVELOPPMENT"
+  }
+  {
+    "title": "Konopolis",
+    "description": "Application de gestion d'un cinéma. Vous pouvez ajouter un film si vous faite partie des admins, autrement vous pouvez choisir un film et réserver des places en cliquant sur le/les siège(s) souhaité(s). Un système de réduction est mis en place. Si la place ne vous convient pas, vous pouvez la retirer de la commande."
+    "tags": ["School Project", "Java"],
+    "status": "DONE",
+    "group": ["Julien Castiaux: https://github.com/julien00859"]
+  },
+  {
+    "title": "WebIRC",
+    "description" "Chat IRC",
+    "tags": ["AngularJS", "NodeJS", "WebSockets"],
+    "status": "DONE",
+    "group": ["Nathan Dolinski: https://github.com/Natherc"]
+  },
+  {
+    "title": "WoodyToys",
+    "description": "Déploiement de microservices pour une entreprise fictive dans des containers Docker"
+    "tags": ["Microservices", "Docker"],
+    "status": "DONE",
+    "group": ["Nathan Dolinski: https://github.com/Natherc"]
   }
 ]
