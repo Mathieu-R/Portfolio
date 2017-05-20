@@ -26,7 +26,6 @@ function hash(dust) {
       const content = await readFileContent(path);
       const hash = await createHash(content);
       const hashedPath = path.replace(/([^\.]+)\.(.+)/, `$1.${hash}.$2`);
-      console.log(hashedPath);
       return chunk.write(hashedPath).end();
     });
   }

@@ -7,6 +7,20 @@
     "status": "DONE"
   },
   {
+    "title": "Movie 2.0",
+    "description": "Bibliothèque en ligne contenant la description des derniers films sortis au cinéma. Possibilité de regarder le trailer",
+    "tags": ["VueJS", "NodeJS"],
+    "group": "false",
+    "status": "DONE"
+  },
+  {
+    "title": "Webpack2 - Boilerplate",
+    "description": "Template pour Webpack 2 entièrement customisable. Réalisé pour Preact mais toutefois utilisable (moyennant quelques modifications) avec d'autre frameworks tels que VueJS,...",
+    "tags": ["Javascript", "Webpack2"],
+    "group": "false",
+    "status": "DONE"
+  },
+  {
     "title": "Progressive Web Poll",
     "description": "Agenda",
     "tags": ["Service Worker", "NodeJS", "MongoDB", "Angular 4"],
@@ -39,6 +53,13 @@
     "description": "Déploiement de microservices pour une entreprise fictive dans des containers Docker",
     "tags": ["Scool Project", "Microservices", "Docker"],
     "group": ["Nathan Dolinski: https://github.com/Natherc"],
+    "status": "DONE"
+  },
+  {
+    "title": "DTE",
+    "description": "Sonde de température réalisée de A à Z. Une led verte est allumée quand la température est en dessous d'un certain seuil et une led rouge clignote quand la température atteint ou dépasse ce seuil. Le seuil peut être modifié depuis une interface JAVA. Celle-ci permet également de voir en temps réel la température actuelle (en plus de l'affichage sur les 7 segments) ainsi que le niveau d'alerte courant.",
+    "tags": ["Electronique", "Proteus", "PIC C Compiler", "Eagle"],
+    "group": ["Christ Van Waesberghe: https://github.com/KeydownR", "Amélie Courtin: https://github.com/AmelieC", "Nathan Dolinski: https://github.com/Natherc"],
     "status": "DONE"
   }
 ]
