@@ -16,7 +16,10 @@
 
 <body>
   <header>
-    <nav class="nav">
+    <div class="logo-container">
+      <a class="logo">E-Portfolio</a>
+    </div>
+    <nav class="nav-container">
       <ul class="nav-content">
         <li><a href="/">Home</a></li>
         <li><a href="/cv">CV</a></li>
