@@ -8,7 +8,13 @@ header {
   max-width: 200px;
 
   .logo {
-    background: url(/static/images/icon@256.png);
+    background: url(/static/images/icon@256.png) left center no-repeat;
+    background-size: 48px 48px;
+    padding: 56px;
+
+    &::after {
+      content: 'Portfolio';
+    }
   }
 }
 
