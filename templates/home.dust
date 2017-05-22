@@ -1,3 +1,0 @@
-{>"partials/header" title=title styles=styles /}
-
-{>"partials/footer" scripts=scripts /}
