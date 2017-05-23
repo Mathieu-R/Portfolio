@@ -1,0 +1,63 @@
+.header-container {
+  height: $baseline * 10;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  .inner-header {
+    display: flex;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    background: url(/static/images/icon@256.png) left center no-repeat;
+    background-size: 48px 48px;
+    height: 48px;
+    padding-left: 56px;
+    margin-left: 20px;
+    color: #37474F;
+
+    &::after {
+      content: 'Portfolio';
+    }
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+
+  .nav-content {
+    margin: 0;
+    max-height: $baseline * 10;
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 5px 10px;
+      padding: 5px;
+
+      a {
+        font-size: 16px;
+        color: #37474F;
+
+        &:hover {
+          color: #1976D2;
+        }
+      }
+    }
+  }
+}
+
+

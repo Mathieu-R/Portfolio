@@ -1,4 +1,10 @@
+{>"base"/}
+
+{<section}
 <section class="masthead">
-  <h1 class="masthead-title">Mathieu Rousseau</h1>
-  <h2 class="masthead-subtitle">Young Dev, Belgium.</h2>
+  <div class="masthead-titles-container">
+    <h1 class="masthead-title">Mathieu Rousseau</h1>
+    <h2 class="masthead-subtitle">Young Dev, Belgium.</h2>
+  </div>
 </section>
+{/section}

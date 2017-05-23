@@ -1,0 +1,31 @@
+.masthead {
+  position: relative;
+  width: 100%;
+  height: $baseline * 46;
+  background: url(/static/images/sunrise-boat.jpg) center no-repeat;
+  background-size: cover;
+  color: #FFF;
+
+  &-titles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Roboto';
+  }
+
+  &-subtitle {
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 18px;
+  }
+}

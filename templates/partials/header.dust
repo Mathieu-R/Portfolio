@@ -15,17 +15,19 @@
 </head>
 
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="/" class="logo"></a>
+  <header class="header-container">
+    <div class="inner-header">
+      <div class="logo-container">
+        <a href="/" class="logo"></a>
+      </div>
+      <nav class="nav-container">
+        <ul class="nav-content">
+          <li><a href="/">Home</a></li>
+          <li><a href="/cv">CV</a></li>
+          <li><a href="/activities">Activités</a></li>
+          <li><a href="/projects">Projets</a></li>
+          <li><a href="/learning">Apprentissage</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav-container">
-      <ul class="nav-content">
-        <li><a href="/">Home</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="/activities">Activités</a></li>
-        <li><a href="/projects">Projets</a></li>
-        <li><a href="/learning">Apprentissage</a></li>
-      </ul>
-    </nav>
   </header>

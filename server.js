@@ -37,7 +37,7 @@ app.set('view engine', 'dust');
 app.set('views', templatePath);
 
 app.get('/', (req, res) => {
-  res.status(200).render('base', {
+  res.status(200).render('sections/home', {
     title: 'Portfolio',
     styles: [path.join(staticPath, 'styles', 'ptf.css')],
     scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
