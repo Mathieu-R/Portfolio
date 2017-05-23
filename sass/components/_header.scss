@@ -60,4 +60,38 @@
   }
 }
 
+@media (max-width: 375px) {
+  .header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    max-width: 90%;
+    height: 100%;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    .inner-header {
+      flex-direction: column;
+    }
+
+    .logo-container {
+      margin: 10px;
+    }
+
+    .nav-container {
+      justify-content: flex-start;
+
+      .nav-content {
+        flex-direction: column;
+        padding: 0 10px;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 

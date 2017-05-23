@@ -1,5 +1,7 @@
-  <footer>
-    <div class="copyright">© Mathieu Rousseau</div>
+  <footer class="footer-container">
+    <div class="inner-footer">
+      <p class="copyright">© Mathieu Rousseau</p>
+    </div>
   </footer>
 
   {#scripts}
