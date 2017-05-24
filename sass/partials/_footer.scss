@@ -1,7 +1,4 @@
 .footer-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   display: flex;
   align-items: center;
   padding: 5px 10px;
@@ -12,7 +9,12 @@
   font-size: 16px;
 
   .inner-footer {
+    display: flex;
     margin: 0 auto;
     max-width: 800px;
+
+    .copyright-icon {
+      margin: 5px;
+    }
   }
 }

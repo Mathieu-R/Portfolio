@@ -1,5 +1,6 @@
 @import '_variables';
-@import '_home';
-@import 'components/_header';
-@import 'components/_footer';
-@import 'components/_masthead';
+@import '_fonts';
+@import '_base';
+@import 'partials/_header';
+@import 'partials/_footer';
+@import 'sections/home/_full';

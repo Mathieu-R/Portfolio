@@ -1,0 +1,40 @@
+.pwa-info {
+  display: flex;
+  margin: 20px auto;
+  padding: 10px 15px;
+  max-width: 600px;
+  height: 300px;
+  background: #5C6BC0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  &-mobile-svg {
+    background: url(/static/images/nexus4.svg) center center no-repeat;
+    background-size: contain;
+    width: 80%;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFF;
+
+    h3 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h3, p {
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+}
