@@ -44,6 +44,38 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/cv', (req, res) => {
+  res.status(200).render('sections/cv', {
+    title: 'Portfolio',
+    styles: [path.join(staticPath, 'styles', 'ptf.css')],
+    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+  });
+});
+
+app.get('/activities', (req, res) => {
+  res.status(200).render('sections/activities', {
+    title: 'Portfolio',
+    styles: [path.join(staticPath, 'styles', 'ptf.css')],
+    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.status(200).render('sections/projects', {
+    title: 'Portfolio',
+    styles: [path.join(staticPath, 'styles', 'ptf.css')],
+    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+  });
+});
+
+app.get('/learning', (req, res) => {
+  res.status(200).render('sections/learning', {
+    title: 'Portfolio',
+    styles: [path.join(staticPath, 'styles', 'ptf.css')],
+    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+  });
+});
+
 app.get('/check', res => res.send('server ok.'));
 
 http.createServer(app).listen(port, () => {
