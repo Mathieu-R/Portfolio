@@ -38,3 +38,19 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .pwa-info {
+    &-content {
+      padding: 0 10px;
+
+      h3 {
+        font-size: 23px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

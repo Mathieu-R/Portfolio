@@ -13,8 +13,56 @@
     margin: 0 auto;
     max-width: 800px;
 
-    .copyright-icon {
-      margin: 5px;
+    .copyright-website, .copyright-icon, .social-network {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
     }
+
+    .copyright-icon {
+      max-width: 300px;
+    }
+
+    .social-networks {
+      position: relative;
+
+      a {
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      .twitter::before, .github::before {
+        content: '';
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: -25px;
+      }
+
+      .twitter::before {
+        background: url(/static/images/twitter.svg) no-repeat;
+      }
+
+      .github::before {
+        background: url(/static/images/github.svg);
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .copyright-website {
+    font-size: 10px;
+  }
+
+  .copyright-icon, .twitter, .github {
+    font-size: 11px;
+  }
+
+  .twitter::before, .github::before {
+    height: 11px;
+    width: 11px;
+    left: -15px;
   }
 }

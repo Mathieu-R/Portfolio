@@ -1,0 +1,14 @@
+.presentation {
+  max-width: 800px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  p {
+    font-family: 'Raleway';
+  }
+}

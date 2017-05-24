@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  background: #FFF;
   width: 100%;
 
   .nav-content {
@@ -65,30 +66,33 @@
 }
 
 @media (max-width: 375px) {
-  .header-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500px;
-    max-width: 90%;
-    height: 100%;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-
-    .inner-header {
-      flex-direction: column;
-    }
+  .inner-header {
 
     .logo-container {
-      margin: 10px;
+      margin: 30px;
     }
 
     .nav-container {
+      position: fixed;
+      display: flex;
       justify-content: flex-start;
+      top: 0;
+      left: 0;
+      width: 500px;
+      max-width: 90%;
+      height: 100%;
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+      will-change: transform;
+      transform: translateX(-102%);
+      transition: transform .3s cubic-bezier(0, 0, 0.3, 1);
+      z-index: 1;
 
       .nav-content {
         flex-direction: column;
-        padding: 0 10px;
+        height: 100%;
+        max-height: inherit;
+        margin-top: 18px;
+        padding: 10px 5px;
 
         li {
           width: 100%;
@@ -97,5 +101,4 @@
     }
   }
 }
-
 
