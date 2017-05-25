@@ -9,7 +9,6 @@
   <link rel="icon" href="/static/images/icon@256.png">
   <link rel="manifest" href={@hash path="static/manifest.json"}{/hash}>
   
-  <link rel="preload" href={@hash path="/static/script/bundle.js"}{/hash} as="script">
   <link rel="preload" href="/static/fonts/Roboto-Thin.woff" as="font" crossorigin>
   <link rel="preload" href="/static/fonts/raleway-regular.woff" as="font" crossorigin>
 
