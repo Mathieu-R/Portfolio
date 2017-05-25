@@ -4,15 +4,15 @@
     "image": "",
     "url": "https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr",
     "description": "Paul Lewis & Surma offer a multi-stranded show to the Chrome Developers channel with the choice of Progressive Web App focused Live Code Sessions, Highlights, Q&A's and MicroTips to help improve your workflow.",
-    "learned": "",
+    "learned": "Ce show m'a permit de me perfectionner en ES6, d'apprendre les dernières features du Web (ex. web components) et à créer des UI elements performants notamment pour mobiles.",
     "tags": ["Web Development", "Javascript", "ES2015", "Custome Elements", "Performance"]
   },
   {
     "title": "Google Web Fondamentals",
     "image": "",
     "url": "https://developers.google.com/web/fundamentals/",
-    "description": "Comme son nom l'indique, ce site est remplis d'article sur divers sujets à propos des fondamentaux du Web. Toutefois, il ne faut pas confondre fondamental et ..., la plupart de ces notions ne sont au contraire pas faciles à comprendre du premier coup mais permettent par la suite à réaliser des applications Web performantes, sécurisées et ergonomiques.",
-    "learned": "",
+    "description": "Comme son nom l'indique, ce site est remplis d'article sur divers sujets à propos des fondamentaux du Web. Toutefois, il ne faut pas confondre fondamental et ..., la plupart de ces notions ne sont au contraire faciles à comprendre du premier coup mais permettent par la suite de réaliser des applications Web performantes, sécurisées et ergonomiques.",
+    "learned": "Pas mal de petit (ou grand) 'tips' sur différents domaines touchant le Web.",
     "tags": ["Web Development", "Javascript", "ES2015", "Custome Elements", "Performance"]
   },
   {
@@ -36,7 +36,7 @@
     "image": "",
     "url": "https://www.rust-lang.org/fr-FR/",
     "description": "\"Rust est un langage de programmation système ultra-rapide, qui prévient les erreurs de segmentation et garantit la sûreté entre threads\".",
-    "learned": "",
+    "learned": "Pour l'instant je suis seulement au début de la phase de l'apprentissage. Toutefois, je pense qu'il est important de connaitre un langage plus beau niveau tel que le Rust voir le C.",
     "tags": ["System"]
   },
   {
@@ -44,7 +44,7 @@
     "image": "",
     "url": "https://bitsofco.de/",
     "description": "Ire Aderinokun est une développeuse Web (Front End) originaire de Lagos au Nigéria, de par la simplicité de ses articles, elle nous apprends en 5 minutes les dernières fonctionnalitées du Web.",
-    "learned": "",
+    "learned": "C'est grâce à cette personne que j'ai pu réaliste mon premier Service Worker.",
     "tags": ["Web Development", "Front-End", "Javascript", "CSS", "HTML"]
   }
 ]
