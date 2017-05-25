@@ -7,7 +7,8 @@ node_js:
 before_script:
   - npm install -g imageoptim-cli
   - npm install -g lighthouse
-  - npm run release
+  - npm run build
+  - npm run bump
   - npm run start
 script:
   - lighthouse --output=json --output-path=./validator/lighthouse.json localhost:3000
