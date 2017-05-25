@@ -1,0 +1,56 @@
+{
+  "Formation": {
+    "2015-2018": "Baccalauréat en Technologie de l’informatique à l’EPHEC (École Pratique des Hautes Etudes Commerciales) de Louvain-la-Neuve.",
+    "2009-2015": "Etudes secondaire à l’institut Vallée Bailly à Braine l’Alleud en option Science (6h) – Anglais (4h) – Math (6h).CESS obtenu en juin 2015."
+  },
+
+  "Langues": {
+    "Français": "Langue Maternelle",
+    "Anglais": "Bonnes connaissances écrites et orales",
+    "Néerlandais": "Moyen - Faible"
+  },
+
+  "Informatique": {
+    "OS - Bureautique": [
+      "Maîtrise des fonctions de bases des programmes de la suite Microsoft Office.",
+      "Maîtrise des systèmes d’exploitations Windows, « Linux », un peu moins pour ce qui est d’OSX."
+    ],
+
+    "Web": {
+      "Front": [
+        "HTML 5, CSS 3, Javascript (ES5, ES 201X).",
+        "Préprocesseur Sass.",
+        "Outils de « bundling » (Webpack, Gulp, Rollup).",
+        "Frameworks AngularJS, VueJS, Preact (ReactJS)."
+      ],
+
+      "Back": [
+        "NodeJS",
+        "PHP",
+        "Flask (Framework Python)",
+        "Ruby on Rails."
+      ],
+
+      "Base de données": [
+        "SQL",
+        "MongoDB"
+      ],
+
+      "Applicatif": [
+        "C système (Linux)",
+        "Java, C# (notions de base).",
+        "Notions d’Elixir, Rust et de Python."
+      ]
+    }
+  },
+
+  "Centre d'intérets": [
+    "Jouer de la musique (Jazz, Gospel,...), mon instrument de prédilection est le piano.",
+    "Développement informatique / projets open-sources.",
+    "Sport en général et plus particulièrement le running / l’athlétisme."
+  ],
+
+  "Divers": [
+    "Possession du permis B"
+  ]
+}

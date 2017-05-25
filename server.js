@@ -13,6 +13,7 @@ const port = process.env.PORT || 3000;
 const staticPath = './static';
 const swPath = './service-worker.js';
 const templatePath = './templates';
+const inlineStyle = fs.readFileSync(path.join(staticPath, 'styles', 'inline.css'));
 
 const options = {
   cache: production ? true : false,
@@ -40,7 +41,8 @@ app.get('/', (req, res) => {
   res.status(200).render('sections/home', {
     title: 'Portfolio',
     styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+    scripts: [path.join(staticPath, 'scripts', 'bundle.js')],
+    inlineStyle: inlineStyle
   });
 });
 

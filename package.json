@@ -8,7 +8,7 @@
     "bump": "npm version patch",
     "build": "yarn build-css && yarn build-js",
     "create-css-folder": "mkdirp static/styles",
-    "build-css": "yarn create-css-folder && node-sass sass/ -o static/styles/",
+    "build-css": "yarn create-css-folder && node-sass sass/ -o static/styles/ && node ./build/clean-css",
     "build-js": "rollup -c rollup.config.production.js",
     "watch": "parallelshell \"yarn watch-js\" \"yarn watch-css\"",
     "watch-css": "yarn create-css-folder && node-sass -w sass/ -o static/styles/",
@@ -27,6 +27,7 @@
     "nodemon": "^1.11.0"
   },
   "devDependencies": {
+    "clean-css": "^4.1.3",
     "compression": "^1.6.2",
     "imageoptim-cli": "^1.14.9",
     "mkdirp": "^0.5.1",

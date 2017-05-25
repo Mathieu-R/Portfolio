@@ -15,21 +15,21 @@
   },
   {
     "title": "Formation C# - Base",
-    "description": "Formation",
+    "description": "Formation à propos des bases de C#. Le formateur était disponible et motivé. ",
     "tags": ["Development", "C#", "Technofutur"],
     "startDate": "2017-04-10",
     "endDate": "2017-04-14"
   },
   {
     "title": "Formation T-SQL et Administration SQL",
-    "description": "",
+    "description": "Formation sur l'administration de bases de données SQL",
     "tags": ["Development", "SQL", "Technofutur"],
     "startDate": "2017-06-26",
     "endDate": "2017-06-30"
   },
   {
     "title": "Formation Java - Avancé",
-    "description": "",
+    "description": "Formation sur des notions avancées de Java. Cela m'a permit d'aller plus en profondeur dans ce langage",
     "tags": ["Development", "Java", "Technofutur"],
     "startDate": "2017-07-31",
     "endDate": "2017-08-04"
