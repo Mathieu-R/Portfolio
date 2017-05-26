@@ -12,13 +12,13 @@
   <link rel="preload" href="/static/fonts/Roboto-Thin.woff" as="font" crossorigin>
   <link rel="preload" href="/static/fonts/raleway-regular.woff" as="font" crossorigin>
 
-  {#styles}
-    <link rel="stylesheet" href={@hash path=.}{/hash}>
-  {/styles}
-
   <style>
     {inlineStyle}
   </style>
+
+  {#styles}
+    <link rel="stylesheet" href={@hash path=.}{/hash}>
+  {/styles}
 </head>
 
 <body>
