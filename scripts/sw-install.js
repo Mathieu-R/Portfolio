@@ -5,17 +5,21 @@ export function serviceWorkerInstall() {
     return;
   }
 
+  navigator.serviceWorker.onmessage = evt => {
+
+  };
+
   navigator.serviceWorker.register('/sw.js', {'scope': '/'})
     .then(reg => {
-      console.log('Service Worker installing...');
       reg.onupdatefound = evt => {
+        console.log('Service Worker installing the new version...');
         Toast.Push('Portfolio updated. Refresh to get the new version.');
 
-        reg.installing.onstatechange = _ => {
-          console.log(`Service Worker ${reg.installing.state}`)
+        reg.installing.onstatechange = evt => {
+          console.log(evt);
+          console.log(`Service Worker ${evt.state}`)
         }
-
-        console.log(evt);
       }
-    }).catch(error => console.warn(error));
+    })
+    .catch(error => console.warn(error));
 }
