@@ -7,3 +7,5 @@ class Toast {
     setTimeout(() => toast.classList.add('show'), 3000);
   }
 }
+
+export default Toast;
