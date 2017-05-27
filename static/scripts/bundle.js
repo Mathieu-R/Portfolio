@@ -42,7 +42,6 @@ function serviceWorkerInstall() {
       reg.installing.onstatechange = evt => {
         // as the service worker is installed, we can push the message
         if (evt.target.state === 'activated') {
-          //navigator.serviceWorker.controller.postMessage('version');
           reg.active.postMessage('version');
         }
         console.log(`Service Worker ${evt.target.state}`);
