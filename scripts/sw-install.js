@@ -9,6 +9,12 @@ export function serviceWorkerInstall() {
     if (evt.data.type === 'version') {
       console.log(`Service Worker updated to version ${evt.data.version}`);
       Toast.Push('Portfolio updated. Refresh to get the new version.');
+      return;
+    }
+
+    if (evt.data.type === 'cached') {
+      Toast.Push('Portfolio cached. Future visit will work offline !');
+      return;
     }
   };
 
