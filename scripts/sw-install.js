@@ -7,7 +7,7 @@ export function serviceWorkerInstall() {
 
   navigator.serviceWorker.onmessage = evt => {
     if (evt.data.type === 'version') {
-      console.log(`Service Worker, current version : ${evt.data.version}`);
+      console.log(`Service Worker updated to version ${evt.data.version}`);
       Toast.Push('Portfolio updated. Refresh to get the new version.');
     }
   };
@@ -15,12 +15,14 @@ export function serviceWorkerInstall() {
   navigator.serviceWorker.register('/sw.js', {'scope': '/'})
     .then(reg => {
       reg.onupdatefound = evt => {
-        console.log('Service Worker installing the new version...');
-        reg.active.postMessage('version');
+        console.log('New service worker has been found, installing...');
 
         reg.installing.onstatechange = evt => {
-          console.log(evt);
-          console.log(`Service Worker ${evt.state}`)
+          // as the service worker is installed, we can push the message
+          if (evt.target.state === 'installed') {
+            reg.active.postMessage('version');
+          }
+          console.log(`Service Worker ${evt.target.state}`)
         }
       }
     })
