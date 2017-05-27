@@ -31,11 +31,12 @@ function serviceWorkerInstall() {
 
   navigator.serviceWorker.register('/sw.js', { 'scope': '/' }).then(reg => {
     reg.onupdatefound = evt => {
-      console.log('New service worker has been found, installing...');
+      console.log('A new service worker has been found, installing...');
 
       reg.installing.onstatechange = evt => {
         // as the service worker is installed, we can push the message
-        if (evt.target.state === 'installed') {
+        if (evt.target.state === 'activated') {
+          //navigator.serviceWorker.controller.postMessage('version');
           reg.active.postMessage('version');
         }
         console.log(`Service Worker ${evt.target.state}`);
