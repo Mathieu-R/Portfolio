@@ -1,3 +1,5 @@
+import Toast from './toast.js';
+
 export function serviceWorkerInstall() {
   if (!('serviceWorker' in navigator)) {
     return;
@@ -6,6 +8,7 @@ export function serviceWorkerInstall() {
   navigator.serviceWorker.onmessage = evt => {
     if (evt.data.type === 'version') {
       console.log(`Service Worker, current version : ${evt.data.version}`);
+      Toast.Push('Portfolio updated. Refresh to get the new version.');
     }
   };
 

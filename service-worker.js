@@ -1,5 +1,3 @@
-import Toast from './toast.js';
-
 const NAME = 'PTF';
 const VERSION = '1.0.0'
 
@@ -21,7 +19,5 @@ self.onmessage = evt => {
       type: 'version',
       version: VERSION
     });
-
-    Toast.Push('Portfolio updated. Refresh to get the new version.');
   }
 }

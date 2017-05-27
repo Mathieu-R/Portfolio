@@ -22,12 +22,17 @@ function serviceWorkerInstall() {
     return;
   }
 
-  navigator.serviceWorker.onmessage = evt => {};
+  navigator.serviceWorker.onmessage = evt => {
+    if (evt.data.type === 'version') {
+      console.log(`Service Worker, current version : ${evt.data.version}`);
+      Toast.Push('Portfolio updated. Refresh to get the new version.');
+    }
+  };
 
   navigator.serviceWorker.register('/sw.js', { 'scope': '/' }).then(reg => {
     reg.onupdatefound = evt => {
       console.log('Service Worker installing the new version...');
-      Toast.Push('Portfolio updated. Refresh to get the new version.');
+      reg.active.postMessage('version');
 
       reg.installing.onstatechange = evt => {
         console.log(evt);
