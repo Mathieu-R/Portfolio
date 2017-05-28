@@ -20,7 +20,11 @@
         </ul>
       </div>
       <div class="activity-date">
-        <span class="activity-date-start">{startDate | normalizedDate}</span> - <span class="activity-date-end">{endDate | normalizedDate}</span>
+        <span class="activity-date-start">{startDate|normalizeDate}</span>
+        {?endDate}
+          -
+          <span class="activity-date-end">{endDate|normalizeDate}</span>
+        {/endDate}
       </div>
     </div>
   </section>
