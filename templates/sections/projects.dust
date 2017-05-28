@@ -1,0 +1,40 @@
+{>"base"/}
+
+{<section}
+{#projects}
+  <section class="project-container">
+    <div class="inner-project">
+      <h3 class="project-title">{title}</h3>
+      <div class="project-description-container">
+        <p class="project-description-content">
+          {description}
+        </p>
+      </div>
+      <div class="project-tags-container">
+        <ul class="project-tags-list">
+          {#tags}
+            <li class="project-tags-element">
+              {.}
+            </li>
+          {/tags}
+        </ul>
+      </div>
+      {@if group}
+        <div class="project-group-container">
+          <ul class="project-group-list">
+            {#group}
+              <li class="project-group-people">
+                {.}
+              </li>
+            {/group}
+          </ul>
+        </div>
+      {/if}
+      <div class="project-status-container">
+        <h3 class="project-status-content">
+          {status}
+        </h3>
+      </div>
+  </section>
+{/projects}
+{/section}

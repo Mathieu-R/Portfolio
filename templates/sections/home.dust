@@ -29,5 +29,5 @@
     <h3 class="pwa-info-title">This portfolio is <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></h3>
     <p class="pwa-info-subtitle">Open it on your phone, touch the <i>'add to homescreen'</i> button and enjoy a complete offline experience</p>
   </div>
-  </section>
+</section>
 {/section}

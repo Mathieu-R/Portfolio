@@ -3,10 +3,12 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const adaro = require('adaro');
+
 const templatePath = path.join(__dirname, '..', '..');
+const production = process.env.NODE_ENV === 'production';
 
 const options = {
-  cache: false,
+  cache: production ? true : false,
   whitespace: true
 };
 

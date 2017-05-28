@@ -11,7 +11,7 @@
   },
 
   "Informatique": {
-    "OS - Bureautique": [
+    "Office": [
       "Maîtrise des fonctions de bases des programmes de la suite Microsoft Office.",
       "Maîtrise des systèmes d’exploitations Windows, « Linux », un peu moins pour ce qui est d’OSX."
     ],
@@ -44,7 +44,7 @@
     }
   },
 
-  "Centre d'intérets": [
+  "Hobbies": [
     "Jouer de la musique (Jazz, Gospel,...), mon instrument de prédilection est le piano.",
     "Développement informatique / projets open-sources.",
     "Sport en général et plus particulièrement le running / l’athlétisme."

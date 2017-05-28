@@ -1,0 +1,28 @@
+{>"base"/}
+
+{<section}
+{#activities}
+  <section class="activity-container">
+    <div class="inner-activity">
+      <h3 class="activity-title">{title}</h3>
+      <div class="activity-description-container">
+        <p class="activity-description-content">
+          {description}
+        </p>
+      </div>
+      <div class="activity-tags-container">
+        <ul class="activity-tags-list">
+          {#tags}
+            <li class="activity-tags-element">
+              {.}
+            </li>
+          {/tags}
+        </ul>
+      </div>
+      <div class="activity-date">
+        <span class="activity-date-start">{startDate | normalizedDate}</span> - <span class="activity-date-end">{endDate | normalizedDate}</span>
+      </div>
+    </div>
+  </section>
+{/activities}
+{/section}
