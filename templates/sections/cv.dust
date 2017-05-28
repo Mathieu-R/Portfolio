@@ -31,7 +31,7 @@
 
       <div class="computer-science-os-office-container">
         <h2 class="computer-science-os-office-title">OS - Bureautique</h2>
-        {#cv.[Informatique].[Office]}
+        {#cv[Informatique][Office]}
           <p class="computer-science-os-office-content">{.}</p>
         {/}
       </div>
@@ -41,21 +41,21 @@
 
         <div class="computer-science-web-front-container">
           <h2 class="computer-science-web-front-title">Front</h2>
-          {#cv.[Informatique].[Web]}
+          {#cv[Informatique][Web]}
             <p class="computer-science-web-front-content">{.}</p>
           {/}
         </div>
 
         <div class="computer-science-web-back-container">
           <h2 class="computer-science-web-back-title">Back</h2>
-          {#cv.[Informatique].[Web]}
+          {#cv[Informatique][Web]}
             <p class="computer-science-web-back-content">{.}</p>
           {/}
         </div>
 
         <div class="computer-science-web-database-container">
           <h2 class="computer-science-web-database-title">Base de données</h2>
-          {#cv.[Informatique].[Web]}
+          {#cv[Informatique][Web]}
             <p class="computer-science-web-database-content">{.}</p>
           {/}
         </div>

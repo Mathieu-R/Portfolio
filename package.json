@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "adaro": "^1.0.4",
+    "dustmotes-iterate": "^0.0.2",
     "express": "^4.15.2",
     "mz": "^2.6.0",
     "nodemon": "^1.11.0"
