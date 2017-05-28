@@ -1,14 +1,29 @@
 {
-  "Formation": {
-    "2015-2018": "Baccalauréat en Technologie de l’informatique à l’EPHEC (École Pratique des Hautes Etudes Commerciales) de Louvain-la-Neuve.",
-    "2009-2015": "Etudes secondaire à l’institut Vallée Bailly à Braine l’Alleud en option Science (6h) – Anglais (4h) – Math (6h).CESS obtenu en juin 2015."
-  },
+  "Formation": [
+    {
+      "date": "2015-2018",
+      "description": "Baccalauréat en Technologie de l’informatique à l’EPHEC (École Pratique des Hautes Etudes Commerciales) de Louvain-la-Neuve."
+    },
+    {
+      "date": "2009-2015",
+      "description": "Etudes secondaire à l’institut Vallée Bailly à Braine l’Alleud en option Science (6h) – Anglais (4h) – Math (6h).CESS obtenu en juin 2015."
+    }
+  ],
 
-  "Langues": {
-    "Français": "Langue Maternelle",
-    "Anglais": "Bonnes connaissances écrites et orales",
-    "Néerlandais": "Moyen - Faible"
-  },
+  "Langues": [
+    {
+      "langue": "Français",
+      "niveau": "Langue Maternelle"
+    },
+    {
+      "langue": "Anglais",
+      "niveau": "Bonnes connaissances écrites et orales"
+    },
+    {
+      "langue": "Français",
+      "niveau": "Moyen - Faible"
+    }
+  ],
 
   "Informatique": {
     "Office": [
@@ -31,7 +46,7 @@
         "Ruby on Rails."
       ],
 
-      "Base de données": [
+      "BDD": [
         "SQL",
         "MongoDB"
       ],

@@ -3,35 +3,35 @@
     "title": "Agenda-Rails",
     "description": "Agenda disponible sans authentification (pour la simplicité), il suffit simplement d'entrer son nom et ensuite de noter des rendez-vous et de les tagger selon leurs niveux d'importance.",
     "tags": ["VueJS", "Ruby on Rails"],
-    "group": "false",
+    "group": false,
     "status": "DONE"
   },
   {
     "title": "Movie 2.0",
     "description": "Bibliothèque en ligne contenant la description des derniers films sortis au cinéma. Possibilité de regarder le trailer",
     "tags": ["VueJS", "NodeJS"],
-    "group": "false",
+    "group": false,
     "status": "DONE"
   },
   {
     "title": "Webpack2 - Boilerplate",
     "description": "Template pour Webpack 2 entièrement customisable. Réalisé pour Preact mais toutefois utilisable (moyennant quelques modifications) avec d'autre frameworks tels que VueJS,...",
     "tags": ["Javascript", "Webpack2"],
-    "group": "false",
+    "group": false,
     "status": "DONE"
   },
   {
     "title": "Progressive Web Poll",
     "description": "Agenda",
     "tags": ["Service Worker", "NodeJS", "MongoDB", "Angular 4"],
-    "group": "false",
+    "group": false,
     "status": "IN DEVELOPPMENT"
   },
   {
     "title": "E-Portfolio",
     "description": "Le site sur lequelle vous vous trouvez. Il fut l'occasion d'implémenter tout ce que j'ai appris ou voulais apprendre (Server Side Rendering, Service Workers, Cache,...).",
     "tags": ["Service Worker", "NodeJS", "Server Side Rendering"],
-    "group": "false",
+    "group": false,
     "status": "IN DEVELOPPMENT"
   },
   {

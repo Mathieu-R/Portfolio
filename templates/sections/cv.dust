@@ -5,24 +5,22 @@
     <div class="cv-formation-container">
       <h1 class="cv-formation-title">Formation</h1>
       <div class="cv-formation-content">
-        {@iterate key={Formation}}
+        {#cv.Formation}
           <p>
-            <span>{$key}</span><span>{$value}</span>
+            <span>{date}</span>: <span>{description}</span>
           </p>
-        {/iterate}
+        {/cv.Formation}
       </div>
     </div>
 
     <div class="language-speaking-container">
-      <h1 class="language speaking title">
-        Langues
-      </h1>
+      <h1 class="language speaking title">Langues</h1>
       <div class="language-speaking-content">
-        {@iterate key={Langues}}
+        {#cv.Langues}
           <p>
-            <span>{$key}</span><span>{$value}</span>
+            <span>{langue}</span>: <span>{niveau}</span>
           </p>
-        {/iterate}
+        {/cv.Langues}
       </div>
     </div>
 
@@ -31,9 +29,9 @@
 
       <div class="computer-science-os-office-container">
         <h2 class="computer-science-os-office-title">OS - Bureautique</h2>
-        {#cv[Informatique][Office]}
+        {#cv.Informatique.Office}
           <p class="computer-science-os-office-content">{.}</p>
-        {/}
+        {/cv.Informatique.Office}
       </div>
 
       <div class="computer-science-web-container">
@@ -41,30 +39,30 @@
 
         <div class="computer-science-web-front-container">
           <h2 class="computer-science-web-front-title">Front</h2>
-          {#cv[Informatique][Web]}
+          {#cv.Informatique.Web.Front}
             <p class="computer-science-web-front-content">{.}</p>
-          {/}
+          {/cv.Informatique.Web.Front}
         </div>
 
         <div class="computer-science-web-back-container">
           <h2 class="computer-science-web-back-title">Back</h2>
-          {#cv[Informatique][Web]}
+          {#cv.Informatique.Web.Back}
             <p class="computer-science-web-back-content">{.}</p>
-          {/}
+          {/cv.Informatique.Web.Back}
         </div>
 
         <div class="computer-science-web-database-container">
           <h2 class="computer-science-web-database-title">Base de données</h2>
-          {#cv[Informatique][Web]}
+          {#cv.Informatique.Web.BDD}
             <p class="computer-science-web-database-content">{.}</p>
-          {/}
+          {/cv.Informatique.Web.BDD}
         </div>
 
         <div class="computer-science-web-applicative-container">
           <h2 class="computer-science-web-applicative-title">Applicatif</h2>
-          {#cv[Informatique][Web]}
+          {#cv.Informatique.Web.Applicatif}
             <p class="computer-science-web-applicative-content">{.}</p>
-          {/}
+          {/cv.Informatique.Web.Applicatif}
         </div>
 
       </div>
@@ -72,17 +70,16 @@
 
     <div class="cv-hoobies-container">
       <h1 class="cv-hobbies-title">Contres d'intérêts</h1>
-      {#cv[Hobbies]}
+      {#cv.Hobbies}
         <p class="cv-hobbies-content">{.}</p>
-      {/}
+      {/cv.Hobbies}
     </div>
 
     <div class="cv-various-container">
       <h1 class="cv-various-title">Divers</h1>
-      {#cv[Divers]}
+      {#cv.Divers}
         <p class="cv-various-content">{.}</p>
-      {/}
+      {/cv.Divers}
     </div>
-
   </section>
 {/section}

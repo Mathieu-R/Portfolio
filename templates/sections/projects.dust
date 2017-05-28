@@ -19,7 +19,7 @@
           {/tags}
         </ul>
       </div>
-      {@if group}
+      {?group}
         <div class="project-group-container">
           <ul class="project-group-list">
             {#group}
@@ -29,7 +29,7 @@
             {/group}
           </ul>
         </div>
-      {/if}
+      {/group}
       <div class="project-status-container">
         <h3 class="project-status-content">
           {status}
