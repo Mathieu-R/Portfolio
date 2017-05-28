@@ -1,5 +1,5 @@
 const NAME = 'PTF';
-const VERSION = '1.0.0'
+const VERSION = '{version}'
 
 self.oninstall = evt => {
   self.skipWaiting();
