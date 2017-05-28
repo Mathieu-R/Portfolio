@@ -17,49 +17,37 @@ const options = {
   ]
 };
 
+const viewOptions = {
+  title: 'Portfolio',
+  styles: [path.join(staticPath, 'styles', 'ptf.css')],
+  scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
+}
+
 app.engine('dust', adaro.dust(options));
 app.set('view engine', 'dust');
 app.set('views', templatePath);
 
 app.get('/', (req, res) => {
-  res.status(200).render('sections/home', {
-    title: 'Portfolio',
-    styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')],
-    inlineStyle: inlineStyle
-  });
+  res.status(200).render('sections/home',
+  Object.assign(viewOptions, {
+    inlineStyle
+  }));
 });
 
 app.get('/cv', (req, res) => {
-  res.status(200).render('sections/cv', {
-    title: 'Portfolio',
-    styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
-  });
+  res.status(200).render('sections/cv', viewOptions);
 });
 
 app.get('/activities', (req, res) => {
-  res.status(200).render('sections/activities', {
-    title: 'Portfolio',
-    styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
-  });
+  res.status(200).render('sections/activities', viewOptions);
 });
 
 app.get('/projects', (req, res) => {
-  res.status(200).render('sections/projects', {
-    title: 'Portfolio',
-    styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
-  });
+  res.status(200).render('sections/projects', viewOptions);
 });
 
 app.get('/learning', (req, res) => {
-  res.status(200).render('sections/learning', {
-    title: 'Portfolio',
-    styles: [path.join(staticPath, 'styles', 'ptf.css')],
-    scripts: [path.join(staticPath, 'scripts', 'bundle.js')]
-  });
+  res.status(200).render('sections/learning', viewOptions);
 });
 
 module.exports = app;
