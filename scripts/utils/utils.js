@@ -4,9 +4,11 @@ export function rafPromise() {
 
 export function transitionEndPromise(el) {
   return new Promise(resolve => {
-    el.addEventListener('transitionend', _ => {
+    const te = _ => {
+      el.removeEventListener('transitionend', te);
       resolve();
-    });
+    }
+    el.addEventListener('transitionend', te);
   });
 };
 
