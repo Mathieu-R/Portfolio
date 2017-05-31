@@ -9,10 +9,11 @@ cache:
   directories:
     - node_modules
 before_script:
+  - yarn global add lighthouse
   - export DISPLAY=:99.0
   - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
   - sh -e /etc/init.d/xvfb start
-  - ./lighthouse-core/scripts/download-chrome.sh
+  - npm explore -g lighthouse -- ./lighthouse-core/scripts/download-chrome.sh
   - yarn build
 script:
   - yarn start &
