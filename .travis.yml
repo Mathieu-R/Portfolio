@@ -20,5 +20,5 @@ before_script:
   - yarn build
 script:
   - yarn start &
-  - lighthouse --output=json --output-path=./validator/lighthouse.json localhost:3000
+  - lighthouse http://localhost:3000 --output=json --output-path=./validator/lighthouse.json 
   - node ./validator/validator.js ./validator/lighthouse.json
