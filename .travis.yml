@@ -10,6 +10,7 @@ cache:
     - node_modules
 before_script:
   - npm install -g lighthouse
+  - lighthouse --version
   - export DISPLAY=:99.0
   - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
   - sh -e /etc/init.d/xvfb start
