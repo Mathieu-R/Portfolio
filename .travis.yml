@@ -10,7 +10,7 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - export LIGHTHOUSE_CHROMIUM_PATH="$(pwd)/chrome-linux/chrome"
-  - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
+  - npm explore -g lighthouse -- ./lighthouse-core/scripts/download-chrome.sh
   - npm run build
 script:
   - npm run start &
