@@ -4,7 +4,7 @@
   "description": "Portfolio - Ephec",
   "main": "server/server.js",
   "scripts": {
-    "test": "lightouse",
+    "test": "lighthouse localhost:3000",
     "bump": "npm version patch",
     "build": "yarn build-css && yarn build-js",
     "create-css-folder": "mkdirp static/styles",
