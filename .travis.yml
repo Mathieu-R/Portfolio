@@ -10,7 +10,7 @@ cache:
     - node_modules
 before_script:
   - yarn build
-  - yarn server/server.js &
+  - node server/server.js &
   - npm install -g lighthouse
   - lighthouse --version
   - git clone https://github.com/GoogleChrome/lighthouse.git
