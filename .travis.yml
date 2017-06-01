@@ -9,6 +9,8 @@ cache:
   directories:
     - node_modules
 before_script:
+  - yarn build
+  - yarn start &
   - npm install -g lighthouse
   - lighthouse --version
   - git clone https://github.com/GoogleChrome/lighthouse.git
@@ -17,8 +19,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - mv lighthouse/lighthouse-core/scripts/download-chrome.sh .
   - ./download-chrome.sh
-  - yarn build
+  - 
 script:
-  - yarn start &
   - lighthouse http://localhost:3000 --output=json --output-path=./validator/lighthouse.json 
   - node ./validator/validator.js ./validator/lighthouse.json
