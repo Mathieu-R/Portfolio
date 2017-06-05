@@ -58,10 +58,10 @@
           {/cv.Informatique.Web.BDD}
         </div>
 
-        <div class="computer-science-web-applicative-container">
-          <h2 class="computer-science-web-applicative-title">Applicatif</h2>
+        <div class="computer-science-applicative-container">
+          <h2 class="computer-science-applicative-title">Applicatif</h2>
           {#cv.Informatique.Web.Applicatif}
-            <p class="computer-science-web-applicative-content">{.}</p>
+            <p class="computer-science-applicative-content">{.}</p>
           {/cv.Informatique.Web.Applicatif}
         </div>
 

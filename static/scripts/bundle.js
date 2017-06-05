@@ -1,5 +1,16 @@
 'use strict';
 
+function loadScript(url) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.setAttribute('async', true);
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+}
+
 class Toast {
   static Push(message) {
     const container = document.querySelector('.toast-container');
@@ -53,6 +64,15 @@ function serviceWorkerInstall() {
 class App {
   constructor() {
     serviceWorkerInstall();
+    this.initCustomElements();
+  }
+
+  initCustomElements() {
+    if (!('customElements' in window)) {
+      loadScript('/static/js/third_party/webcomponents-lite.js').then(_ => {
+        console.log('custom-elements polyfill added.');
+      });
+    }
   }
 }
 
