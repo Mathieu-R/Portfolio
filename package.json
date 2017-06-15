@@ -34,7 +34,7 @@
     "lighthouse": "^2.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.2",
-    "parallelshell": "^2.0.0",
+    "parallelshell": "^3.0.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-cleanup": "^1.0.0",
