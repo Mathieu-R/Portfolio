@@ -1,8 +1,56 @@
 .learning-container {
-
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  .inner-learning {
+    padding: 5px 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin: 5px;
+
+    .learning-title {
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 22px;
+      color: #555;
+    }
+
+    .learning-tags-list {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+
+      li {
+        padding: 15px;
+        font-size: 14px;
+        color: #444;
+      }
+    }
+
+    .learning-date {
+      span {
+        font-size: 14px;
+        font-style: italic;
+        color: #333;
+      }
+    }
+  }
+
+  .activity-description-container {
+    /*padding-right: 20px; */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    li {
+      padding: 0 5px;
+      font-size: 14px;
+    }
+  }
 }
