@@ -27,6 +27,8 @@
       <div class="logo-container">
         <a href="/" class="logo"></a>
       </div>
+      <label for="toggle_nav" class="toggle_nav-label" aria-label="toggle_nav"></label>
+      <input type="checkbox" id="toggle_nav" role="button">
       <nav class="nav-container" role="navigation">
         <ul class="nav-content">
           <li><a href="/">Home</a></li>
