@@ -1,7 +1,6 @@
 [
   {
     "title": "Supercharged",
-    "image": "",
     "url": "https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr",
     "description": "Paul Lewis & Surma offer a multi-stranded show to the Chrome Developers channel with the choice of Progressive Web App focused Live Code Sessions, Highlights, Q&A's and MicroTips to help improve your workflow.",
     "learned": "Ce show m'a permit de me perfectionner en ES6, d'apprendre les dernières features du Web (ex. web components) et à créer des UI elements performants notamment pour mobiles.",
@@ -9,7 +8,6 @@
   },
   {
     "title": "Google Web Fondamentals",
-    "image": "",
     "url": "https://developers.google.com/web/fundamentals/",
     "description": "Comme son nom l'indique, ce site est remplis d'article sur divers sujets à propos des fondamentaux du Web. Toutefois, il ne faut pas confondre fondamental et ..., la plupart de ces notions ne sont au contraire faciles à comprendre du premier coup mais permettent par la suite de réaliser des applications Web performantes, sécurisées et ergonomiques.",
     "learned": "Pas mal de petit (ou grand) 'tips' sur différents domaines touchant le Web.",
@@ -17,15 +15,13 @@
   },
   {
     "title": "Conferences",
-    "image": "",
     "url": "https://developer.chrome.com/devsummit/",
     "description": "Google I/O, Chrome Dev Summit, Polymer Summit, Progressive Web Apps Summit,... ",
     "learned": "Ces conférences m'ont permisent de rester au courant et d'apprendre les toutes dernières technologies et matière de Web (principalement front-end). Il ne s'agissait pas seulement du développement mais également d'apprendre à se servir de manière efficace de la 'Chrome Devtool' ou encore d'utiliser certains outils d'audit de performance tel que Lighthouse. Mais encore de découvrir le monde merveilleux des Progressives Web Apps (PWA).",
-    "tags": ["Web Development", "Javascript", "ES2015", "Custome Elements", "Performance", "Progressive Web Apps"]
+    "tags": ["Web Development", "Javascript", "ES2015", "Custom Elements", "Performance", "Progressive Web Apps"]
   },
   {
     "title": "Grafikart",
-    "image": "",
     "url": "https://www.grafikart.fr",
     "description": "De son vrai nom, Jonathan Boyer, Grafikart est un jeune développeur 'Freelance', fort de ses 10 ans d'expérience, il nous apprend avec simplicité et efficacité le développement Web du front end au back end",
     "learned": "Une de mes premières sources d'apprentissage (après OpenClassroom), il m'a appris les rudiments du développement Web mais égalements des notions bien plus avancées. J'ai notamment appris le language Ruby (et Ruby on Rails pour le Web), comment utiliser docker et docker-compose, quelques notions d'administration système mais égalements certains frameworks tels qu'AngularJS et VueJS. I lest sûrement l'un des premiers à m'avoir fait aimer le développement Web.",
@@ -33,7 +29,6 @@
   },
   {
     "title": "Rust",
-    "image": "",
     "url": "https://www.rust-lang.org/fr-FR/",
     "description": "\"Rust est un langage de programmation système ultra-rapide, qui prévient les erreurs de segmentation et garantit la sûreté entre threads\".",
     "learned": "Pour l'instant je suis seulement au début de la phase de l'apprentissage. Toutefois, je pense qu'il est important de connaitre un langage plus beau niveau tel que le Rust voir le C.",
@@ -41,7 +36,6 @@
   },
   {
     "title": "BitsOfCode - Ire Aderinokun",
-    "image": "",
     "url": "https://bitsofco.de/",
     "description": "Ire Aderinokun est une développeuse Web (Front End) originaire de Lagos au Nigéria, de par la simplicité de ses articles, elle nous apprends en 5 minutes les dernières fonctionnalitées du Web.",
     "learned": "C'est grâce à cette personne que j'ai pu réaliste mon premier Service Worker.",
