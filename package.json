@@ -15,7 +15,7 @@
     "watch-js": "rollup -wc rollup.config.js",
     "optimize-images": "imageoptim -d static/images",
     "release": "yarn optimize-images && yarn build && yarn bump",
-    "start": "nodemon --inspect server/server.js"
+    "server": "nodemon --inspect server/server.js"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "clean-css": "^4.1.3",
     "compression": "^1.6.2",
+    "eslint-config-google": "^0.8.0",
     "imageoptim-cli": "^1.14.9",
     "lighthouse": "^2.0.0",
     "mkdirp": "^0.5.1",
