@@ -29,9 +29,11 @@
 
       <div class="computer-science-os-office-container">
         <h2 class="computer-science-os-office-title">OS - Bureautique</h2>
-        {#cv.Informatique.Office}
-          <p class="computer-science-os-office-content">{.}</p>
-        {/cv.Informatique.Office}
+        <div class="computer-science-os-office-subcontainer">
+          {#cv.Informatique.Office}
+            <p class="computer-science-os-office-content">{.}</p>
+          {/cv.Informatique.Office}
+        </div>
       </div>
 
       <div class="computer-science-web-container">
@@ -58,8 +60,8 @@
           {/cv.Informatique.Web.BDD}
         </div>
 
+        <h2 class="computer-science-applicative-title">Applicatif</h2>
         <div class="computer-science-applicative-container">
-          <h2 class="computer-science-applicative-title">Applicatif</h2>
           {#cv.Informatique.Web.Applicatif}
             <p class="computer-science-applicative-content">{.}</p>
           {/cv.Informatique.Web.Applicatif}
@@ -69,17 +71,21 @@
     </div>
 
     <div class="cv-hoobies-container">
-      <h1 class="cv-hobbies-title">Contres d'intérêts</h1>
-      {#cv.Hobbies}
-        <p class="cv-hobbies-content">{.}</p>
-      {/cv.Hobbies}
+      <h1 class="cv-hobbies-title">Centres d'intérêts</h1>
+      <div class="cv-hobbies-subcontainer">
+        {#cv.Hobbies}
+          <p class="cv-hobbies-content">{.}</p>
+        {/cv.Hobbies}
+      </div>
     </div>
 
     <div class="cv-various-container">
       <h1 class="cv-various-title">Divers</h1>
-      {#cv.Divers}
-        <p class="cv-various-content">{.}</p>
-      {/cv.Divers}
+      <div class="cv-various-subcontainer">
+        {#cv.Divers}
+          <p class="cv-various-content">{.}</p>
+        {/cv.Divers}
+      </div>
     </div>
   </section>
 {/section}

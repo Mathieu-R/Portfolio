@@ -45,6 +45,7 @@
 
   .nav-content {
     margin: 0;
+    padding: 0;
     max-height: $baseline * 10;
     display: flex;
     list-style: none;
@@ -65,9 +66,8 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 530px) {
   .inner-header {
-
     .logo-container {
       margin: 30px;
     }
@@ -99,6 +99,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 620px) {
+  .nav-content a {
+    font-size: 14px !important;
   }
 }
 

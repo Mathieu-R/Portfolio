@@ -18,7 +18,8 @@
       color: #555;
     }
 
-    .project-tags-list {
+    .project-tags-list,
+    .project-group-list {
       display: flex;
       flex-direction: row;
       padding: 0;
@@ -28,6 +29,23 @@
         font-size: 14px;
         color: #444;
       }
+    }
+
+    .project-group-list {
+      li {
+        padding: 0px;
+      }
+    }
+
+    .project-group-list-collaborator {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .project-group-people a {
+      margin: 0 5px;
+      font-style: italic;
+      color: #444;
     }
   }
 

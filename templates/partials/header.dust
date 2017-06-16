@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="fr">
 <head>
   <title>{title}</title>
   <meta charset="utf-8">
@@ -27,7 +27,7 @@
       <div class="logo-container">
         <a href="/" class="logo"></a>
       </div>
-      <nav class="nav-container">
+      <nav class="nav-container" role="navigation">
         <ul class="nav-content">
           <li><a href="/">Home</a></li>
           <li><a href="/cv">CV</a></li>

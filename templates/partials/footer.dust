@@ -1,14 +1,18 @@
   <footer class="footer-container">
     <div class="inner-footer">
-      <p class="copyright-website">© Mathieu Rousseau</p>
-      <p class="copyright-icon">
-        Some icons are made by [Chris Veigt, Madebyoliver]
-        from www.flaticon.com
-      </p>
-      <div class="social-networks">
-        <p class="twitter"><a href="https://twitter.com/mathieu7745">@mathieu7745</a></p>
-        <p class="github"><a href="https://github.com/Mathieu-R">Mathieu-R</a></p>
-      </div>
+      <section class="main-footer-infos">
+        <p class="copyright-website">© Mathieu Rousseau</p>
+        <div class="social-networks">
+          <p class="twitter"><a href="https://twitter.com/mathieu7745">@mathieu7745</a></p>
+          <p class="github"><a href="https://github.com/Mathieu-R">Mathieu-R</a></p>
+        </div>
+      </section>
+      <section class="secondary-footer-infos">
+        <p class="copyright-icon">
+          Some icons are made by [Chris Veigt, Madebyoliver]
+          from www.flaticon.com
+        </p>
+      </section>
     </div>
   </footer>
 

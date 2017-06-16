@@ -38,28 +38,38 @@
     "title": "WebIRC",
     "description": "Chat IRC",
     "tags": ["AngularJS", "NodeJS", "WebSockets"],
-    "group": ["Julien Castiaux: https://github.com/julien00859"],
+    "group": [{
+      "name": "Julien Castiaux", "url": "https://github.com/julien00859"
+    }],
     "status": "DONE"
   },
   {
     "title": "Konopolis",
     "description": "Application de gestion d'un cinéma. Vous pouvez ajouter un film si vous faite partie des admins, autrement vous pouvez choisir un film et réserver des places en cliquant sur le/les siège(s) souhaité(s). Un système de réduction est mis en place. Si la place ne vous convient pas, vous pouvez la retirer de la commande.",
     "tags": ["School Project", "Java"],
-    "group": ["Nathan Dolinski: https://github.com/Natherc"],
+    "group": [{
+      "name": "Nathan Dolinski", "url": "https://github.com/Natherc"
+    }],
     "status": "DONE"
   },
   {
     "title": "WoodyToys",
     "description": "Déploiement de microservices pour une entreprise fictive dans des containers Docker",
     "tags": ["Scool Project", "Microservices", "Docker"],
-    "group": ["Nathan Dolinski: https://github.com/Natherc"],
+    "group": [{
+      "name": "Nathan Dolinski", "url": "https://github.com/Natherc"
+    }],
     "status": "DONE"
   },
   {
     "title": "DTE",
     "description": "Sonde de température réalisée de A à Z. Une led verte est allumée quand la température est en dessous d'un certain seuil et une led rouge clignote quand la température atteint ou dépasse ce seuil. Le seuil peut être modifié depuis une interface JAVA. Celle-ci permet également de voir en temps réel la température actuelle (en plus de l'affichage sur les 7 segments) ainsi que le niveau d'alerte courant.",
     "tags": ["Electronique", "Proteus", "PIC C Compiler", "Eagle"],
-    "group": ["Christ Van Waesberghe: https://github.com/KeydownR", "Amélie Courtin: https://github.com/AmelieC", "Nathan Dolinski: https://github.com/Natherc"],
+    "group": [{
+      "name": "Christ Van Waesberghe", "url": "https://github.com/KeydownR"
+    }, {"name": "Amélie Courtin", "url": "https://github.com/AmelieC"
+    }, {"name": "Nathan Dolinski", "url": "https://github.com/Natherc"
+    }],
     "status": "DONE"
   }
 ]

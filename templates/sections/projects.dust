@@ -22,9 +22,10 @@
       {?group}
         <div class="project-group-container">
           <ul class="project-group-list">
+            <span class="project-group-list-collaborator">Collaborateur(s) : </span>
             {#group}
               <li class="project-group-people">
-                {.}
+                <a href="{url}">{name}</a>
               </li>
             {/group}
           </ul>

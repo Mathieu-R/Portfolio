@@ -10,6 +10,8 @@
 
   .inner-footer {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 800px;
 
@@ -21,11 +23,12 @@
     }
 
     .copyright-icon {
-      max-width: 300px;
+
     }
 
     .social-networks {
       position: relative;
+      margin: 0 50px;
 
       a {
         color: #FFF;
@@ -41,12 +44,25 @@
       }
 
       .twitter::before {
-        background: url(/static/images/twitter.svg) no-repeat;
+        background: url(/static/images/twitter.svg) center no-repeat no-repeat;
       }
 
       .github::before {
-        background: url(/static/images/github.svg);
+        background: url(/static/images/github.svg) center no-repeat no-repeat;
       }
+    }
+
+    .main-footer-infos {
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .secondary-footer-infos {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
     }
   }
 }
