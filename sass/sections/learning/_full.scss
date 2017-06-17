@@ -78,4 +78,28 @@
       font-size: 14px;
     }
   }
+
+  .learning-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .learning-url-content {
+      padding: 10px;
+      background: none;
+      border: none;
+      border-radius: 3px;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        background: #FFF9C4;
+      }
+
+      a {
+        font-size: 14px;
+        color: #F57F17;
+        text-decoration: none;
+      }
+    }
+  }
 }

@@ -11,6 +11,7 @@
         </p>
       </div>
       <div class="project-tags-container">
+        <h4>Technologies</h4>
         <ul class="project-tags-list">
           {#tags}
             <li class="project-tags-element">
@@ -21,8 +22,8 @@
       </div>
       {?group}
         <div class="project-group-container">
+          <h4 class="project-group-list-collaborator">Collaborateur(s)</h4>
           <ul class="project-group-list">
-            <span class="project-group-list-collaborator">Collaborateur(s) : </span>
             {#group}
               <li class="project-group-people">
                 <a href="{url}">{name}</a>

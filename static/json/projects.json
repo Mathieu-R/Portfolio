@@ -10,7 +10,7 @@
   {
     "title": "Movie 2.0",
     "url": "https://github.com/Mathieu-R/Movie-2.0",
-    "description": "Bibliothèque en ligne contenant la description des derniers films sortis au cinéma. Possibilité de regarder le trailer",
+    "description": "Bibliothèque en ligne contenant la description des derniers films sortis au cinéma. Possibilité de regarder le trailer.",
     "tags": ["VueJS", "NodeJS"],
     "group": false,
     "status": "DONE"
@@ -26,7 +26,7 @@
   {
     "title": "Progressive Web Poll",
     "url": "https://github.com/Mathieu-R/Progressive-Web-Poll",
-    "description": "Créez vos sondages en 30 secondes et partagez les avec vos amis",
+    "description": "Créez vos sondages en 30 secondes et partagez les avec vos amis.",
     "tags": ["Service Worker", "NodeJS", "MongoDB", "Preact"],
     "group": false,
     "status": "IN DEVELOPPMENT"
@@ -42,7 +42,7 @@
   {
     "title": "WebIRC",
     "url": "https://github.com/Julien00859/WebIRC",
-    "description": "Chat IRC",
+    "description": "Chat IRC dans le navigateur, certains plugins était déployés. Possibilité de discuter en privé et de rejoindre/créer des channels spécifiques. Système de droit qui permet à des utilisateurs de kicker un spammeur par exemple.",
     "tags": ["AngularJS", "NodeJS", "WebSockets"],
     "group": [{
       "name": "Julien Castiaux", "url": "https://github.com/julien00859"
@@ -62,7 +62,7 @@
   {
     "title": "WoodyToys",
     "url": "https://github.com/Mathieu-R/WoodyToys",
-    "description": "Déploiement de microservices pour une entreprise fictive dans des containers Docker",
+    "description": "Déploiement de microservices pour une entreprise fictive dans des containers Docker.",
     "tags": ["Scool Project", "Microservices", "Docker"],
     "group": [{
       "name": "Nathan Dolinski", "url": "https://github.com/Natherc"
