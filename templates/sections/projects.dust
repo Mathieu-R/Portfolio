@@ -35,6 +35,7 @@
         <h3 class="project-status-content">
           {status}
         </h3>
+        <button class="project-url-content" tabindex="0"><a href="{url}">explore</a></button>
       </div>
   </section>
 {/projects}

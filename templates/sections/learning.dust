@@ -30,6 +30,9 @@
           {/tags}
         </ul>
       </div>
+      <div class="learning-buttons-container">
+        <button class="learning-url-content" tabindex="0"><a href="{url}">explore</a></button>
+      </div>
     </div>
   </section>
 {/learnings}
