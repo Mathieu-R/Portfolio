@@ -7,32 +7,14 @@
 
   .inner-learning {
     padding: 5px 15px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     margin: 5px;
 
     .learning-title {
       font-family: Roboto;
-      font-weight: 300;
       font-size: 22px;
-      color: #555;
-    }
-
-    .learning-learned-container > p {
-      margin-bottom: 0;
-    }
-
-    .learning-tags-list {
-      display: flex;
-      flex-direction: row;
-      padding: 0;
-      margin: 0;
-
-      li {
-        padding: 15px;
-        font-size: 14px;
-        color: #444;
-      }
+      color: black;
     }
 
     .learning-date {
@@ -55,27 +37,50 @@
 
       }
     }
-
-    .activity-date {
-      margin-bottom: 2px;
-    }
   }
 
-  .activity-description-container {
-    /*padding-right: 20px; */
-  }
+  .learning-description-container,
+  .learning-learned-container {
+    margin: 0;
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    list-style: none;
-
-    li {
-      display: flex;
-      align-items: center;
-      padding: 0 5px;
+    .learning-description-content,
+    .learning-learned-content {
       font-size: 14px;
+        color: #555;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        background: #eaeaea;
+        height: 1px;
+        width: 95%;
+      }
+  }
+
+  .learning-tags-container {
+    h4 {
+      margin: 15px 0 0 0;
+      font-weight: 100;
+      font-size: 15px;
+      color: #222;
+    }
+
+    .learning-tags-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+
+      .learning-tags-element {
+        font-weight: bold;
+        color: #777;
+        padding: 15px;
+      }
     }
   }
 

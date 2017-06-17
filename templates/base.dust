@@ -2,7 +2,5 @@
 
 {+section/}
 
-<div class="toast-container">
-
-</div>
+<div class="toast-container"></div>
 {>"partials/footer" scripts=scripts /}

@@ -1,7 +1,7 @@
 {>"base"/}
 
 {<section}
-  <section class="cv-container">
+  <section class="cv-container content">
     <div class="cv-formation-container">
       <h1 class="cv-formation-title">Formation</h1>
       <div class="cv-formation-content">

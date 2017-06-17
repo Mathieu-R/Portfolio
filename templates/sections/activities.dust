@@ -1,6 +1,7 @@
 {>"base"/}
 
 {<section}
+<main class="content">
 {#activities}
   <section class="activity-container">
     <div class="inner-activity">
@@ -11,6 +12,7 @@
         </p>
       </div>
       <div class="activity-tags-container">
+        <h4>Technologies</h4>
         <ul class="activity-tags-list">
           {#tags}
             <li class="activity-tags-element">
@@ -29,4 +31,5 @@
     </div>
   </section>
 {/activities}
+</main>
 {/section}

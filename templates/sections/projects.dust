@@ -1,6 +1,7 @@
 {>"base"/}
 
 {<section}
+<main class="content">
 {#projects}
   <section class="project-container">
     <div class="inner-project">
@@ -40,4 +41,5 @@
       </div>
   </section>
 {/projects}
+</main>
 {/section}

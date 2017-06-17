@@ -8,26 +8,28 @@
   </div>
 </section>
 
-<section class="presentation">
-  <p>
-    Hi! I'm a young Student Web Developper from Belgium. I'm a design enthusiast even if it's not my job nor a part of my studies.
-    I love the Web and I'm currently exited about WebVR, Service Workers and Progressive Web Apps (PWA).
-  </p>
-  <p>
-    Otherwise, I love sport especially track & field. I run during my spare-time. I think it's important to move and get in shape
-    and we as developpers and computer scientists have to fight against nonactivity.
-  </p>
-  <p>
-    Lastly, I'm a music enthusiast, I personnaly play the piano, it's a talent i've been gifted
-    and love gospel music and african song. It gets you so much in the mood! Anyway, I think it's quiet enough for you to know me.
-  </p>
-</section>
+<main class="content">
+  <section class="presentation">
+    <p>
+      Hi! I'm a young Student Web Developper from Belgium. I'm a design enthusiast even if it's not my job nor a part of my studies.
+      I love the Web and I'm currently exited about WebVR, Service Workers and Progressive Web Apps (PWA).
+    </p>
+    <p>
+      Otherwise, I love sport especially track & field. I run during my spare-time. I think it's important to move and get in shape
+      and we as developpers and computer scientists have to fight against nonactivity.
+    </p>
+    <p>
+      Lastly, I'm a music enthusiast, I personnaly play the piano, it's a talent i've been gifted
+      and love gospel music and african song. It gets you so much in the mood! Anyway, I think it's quiet enough for you to know me.
+    </p>
+  </section>
 
-<section class="pwa-info">
-  <div class="pwa-info-mobile-svg"></div>
-  <div class="pwa-info-content">
-    <h3 class="pwa-info-title">This portfolio is <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></h3>
-    <p class="pwa-info-subtitle">Open it on your phone, touch the <i>'add to homescreen'</i> button and enjoy a complete offline experience</p>
-  </div>
-</section>
+  <section class="pwa-info">
+    <div class="pwa-info-mobile-svg"></div>
+    <div class="pwa-info-content">
+      <h3 class="pwa-info-title">This portfolio is <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></h3>
+      <p class="pwa-info-subtitle">Open it on your phone, touch the <i>'add to homescreen'</i> button and enjoy a complete offline experience</p>
+    </div>
+  </section>
+</main>
 {/section}

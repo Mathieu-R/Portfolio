@@ -7,15 +7,14 @@
 
   .inner-activity {
     padding: 5px 15px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     margin: 5px;
 
     .activity-title {
       font-family: Roboto;
-      font-weight: 300;
       font-size: 22px;
-      color: #555;
+      color: black;
     }
 
     .activity-tags-list {
@@ -40,17 +39,44 @@
   }
 
   .activity-description-container {
-    /*padding-right: 20px; */
+    margin: 0;
+
+    .activity-description-content {
+      font-size: 14px;
+        color: #555;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        background: #eaeaea;
+        height: 1px;
+        width: 95%;
+      }
   }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+  .activity-tags-container {
+    h4 {
+      margin: 15px 0 0 0;
+      font-weight: 100;
+      font-size: 15px;
+      color: #222;
+    }
 
-    li {
-      padding: 0 5px;
-      font-size: 14px;
+    .activity-tags-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+
+      .activity-tags-element {
+        font-weight: bold;
+        color: #777;
+      }
     }
   }
 }

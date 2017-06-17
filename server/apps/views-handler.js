@@ -38,35 +38,40 @@ app.set('views', templatePath);
 app.get('/', (req, res) => {
   res.status(200).render('sections/home',
   Object.assign(viewOptions, {
-    inlineStyle
+    inlineStyle,
+    section: 'home'
   }));
 });
 
 app.get('/cv', (req, res) => {
   res.status(200).render('sections/cv',
   Object.assign(viewOptions, {
-    cv
+    cv,
+    section: 'cv'
   }));
 });
 
 app.get('/activities', (req, res) => {
   res.status(200).render('sections/activities',
   Object.assign(viewOptions, {
-    activities
+    activities,
+    section: 'activities'
   }));
 });
 
 app.get('/projects', (req, res) => {
   res.status(200).render('sections/projects',
   Object.assign(viewOptions, {
-    projects
+    projects,
+    section: 'projects'
   }));
 });
 
 app.get('/learning', (req, res) => {
   res.status(200).render('sections/learning',
   Object.assign(viewOptions, {
-    learnings
+    learnings,
+    section: 'learnings'
   }));
 });
 

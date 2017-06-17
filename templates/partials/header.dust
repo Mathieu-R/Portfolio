@@ -25,17 +25,17 @@
   <header class="header-container">
     <div class="inner-header">
       <div class="logo-container">
-        <a href="/" class="logo"></a>
+        <a class="logo nav-link" href="/"></a>
       </div>
       <label for="toggle_nav" class="toggle_nav-label" aria-label="toggle_nav"></label>
       <input type="checkbox" id="toggle_nav" role="button">
       <nav class="nav-container" role="navigation">
         <ul class="nav-content">
-          <li><a href="/">Home</a></li>
-          <li><a href="/cv">CV</a></li>
-          <li><a href="/activities">Activités</a></li>
-          <li><a href="/projects">Projets</a></li>
-          <li><a href="/learning">Apprentissage</a></li>
+          <li><a class="nav-content-link nav-link" href="/">Home</a></li>
+          <li><a class="nav-content-link nav-link" href="/cv">CV</a></li>
+          <li><a class="nav-content-link nav-link" href="/activities">Activités</a></li>
+          <li><a class="nav-content-link nav-link" href="/projects">Projets</a></li>
+          <li><a class="nav-content-link nav-link" href="/learning">Apprentissage</a></li>
         </ul>
       </nav>
     </div>
