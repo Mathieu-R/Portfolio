@@ -1,6 +1,8 @@
 # Portfolio
 Portfolio for School.
 
+![screenshot-mobile](http://i.imgur.com/tdqvGpi.png)
+
 #### LICENCE 
 
 MIT License
