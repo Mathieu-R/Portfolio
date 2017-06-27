@@ -1,7 +1,7 @@
 # Portfolio
 Portfolio for School.
 
-![screenshot-mobile](http://i.imgur.com/tdqvGpi.png)
+<img src="http://i.imgur.com/tdqvGpi.png" alt="screenshot" height=500>
 
 #### LICENCE 
 
