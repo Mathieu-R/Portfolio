@@ -82,6 +82,7 @@ class App {
     this.loadView = this.loadView.bind(this);
     this.swapContent = this.swapContent.bind(this);
     this.hideAreas = this.hideAreas.bind(this);
+    this.slideBackUp = this.slideBackUp.bind(this);
 
     serviceWorkerInstall();
     this.initCustomElements();
@@ -120,10 +121,6 @@ class App {
       const newMasthead = view.querySelector('.masthead');
       const newContent = view.querySelector('.content');
 
-      if (this.slideUpLinks.includes(url)) {
-        newContent.classList.add('slide-down');
-      }
-
       // TODO: rework this code
       if (newMasthead) {
         if (currentMasthead) {
@@ -139,15 +136,27 @@ class App {
       currentContent.innerHTML = newContent.innerHTML;
       currentContent.className = newContent.className;
 
+      if (this.slideUpLinks.includes(url)) {
+        currentContent.classList.add('slide-down');
+      }
+
       // double rAF
       requestAnimationFrame(_ => {
         requestAnimationFrame(_ => {
           if (this.slideUpLinks.includes(url)) {
-            document.querySelector('.content').classList.remove('slide-down');
+            this.slideBackUp().then(_ => this.pageContent.style.transition = '');
           }
           document.body.classList.remove('hide');
         });
       });
+    });
+  }
+
+  slideBackUp() {
+    return new Promise((resolve, reject) => {
+      this.pageContent.style.transition = 'opacity .3s cubic-bezier(0,0,0.3,1), transform .5s cubic-bezier(0,0,0.3,1)';
+      this.pageContent.addEventListener('transitionend', resolve);
+      this.pageContent.classList.remove('slide-down');
     });
   }
 
@@ -169,10 +178,6 @@ class App {
 
   onChanged() {
     this.newPath = window.location.pathname;
-
-    if (this.currentPath === this.newPtath) {
-      return;
-    }
     this.currentPath = this.newPath;
 
     sideNav.close();
@@ -182,6 +187,9 @@ class App {
 
   onClickLinks(evt) {
     evt.preventDefault();
+    if (new URL(evt.target.href).pathname === window.location.pathname) {
+      return;
+    }
     history.pushState(null, null, evt.target.href);
     this.onChanged();
   }
