@@ -72,13 +72,17 @@ class App {
 
       if (this.slideUpLinks.includes(url)) {
         currentContent.classList.add('slide-down');
+        currentContent.style.willChange = 'transform';
       }
 
       // double rAF
       requestAnimationFrame(_ => {
         requestAnimationFrame(_ => {
           if (this.slideUpLinks.includes(url)) {
-            this.slideBackUp().then(_ => this.pageContent.style.transition = '');
+            this.slideBackUp().then(_ => {
+              this.pageContent.style.transition = '';
+              this.pageContent.style.willChange = '';
+            });
           }
           document.body.classList.remove('hide');
         });
