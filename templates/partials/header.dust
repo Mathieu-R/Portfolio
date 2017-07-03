@@ -1,4 +1,5 @@
-<!DOCTYPE html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <title>{title}</title>
   <meta charset="utf-8">
@@ -16,9 +17,34 @@
     {inlineStyle}
   </style>
 
-  {#styles}
-    <link rel="stylesheet" href={@hash path=.}{/hash}>
-  {/styles}
+  <script>
+    function loadStyle(url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(style => {
+          const link = document.createElement('link');
+          link.href = url;
+          link.rel = 'stylesheet';
+          document.head.appendChild(link);
+        })
+        .catch(err => console.error(err));
+    };
+
+    function loadStyleAsync() {
+      if (document.querySelector('link[href="{@hash path="static/styles/ptf.css"}{/hash}"]')) {
+        return;
+      }
+      loadStyle('{@hash path="static/styles/ptf.css"}{/hash}');
+    };
+
+    loadStyleAsync();
+  </script>
+
+  <noscript>
+    {#styles}
+      <link rel="stylesheet" href={@hash path=.}{/hash}>
+    {/styles}
+  </noscript>
 </head>
 
 <body>

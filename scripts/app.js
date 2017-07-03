@@ -1,12 +1,15 @@
 import {loadScript} from './utils/utils.js';
 import {serviceWorkerInstall} from './sw-install.js';
-import Toast from './toast.js';
+import Toast from './utils/toast.js';
+import sideNav from './components/sidenav.js';
 
 class App {
   constructor() {
     this.currentPath = window.location.pathname;
     this.links = Array.from(document.querySelectorAll('.nav-link'));
+    this.navLinks = Array.from(document.querySelectorAll('.nav-content-link'));
     this.pageContent = document.querySelector('.content');
+    this.slideUpLinks = ['/activities', '/projects', '/learning'];
 
     this.onClickLinks = this.onClickLinks.bind(this);
     this.onChanged = this.onChanged.bind(this);
@@ -41,8 +44,8 @@ class App {
     });
   }
 
-  swapContent(view) {
-    this.hideAreas().then(_ => {
+  swapContent(view, url) {
+    this.hideAreas(url).then(_ => {
       this.pageContent.removeEventListener('transitionend', this.onSwapTransitionEnd);
 
       const currentMasthead = document.querySelector('.masthead');
@@ -50,6 +53,10 @@ class App {
 
       const newMasthead = view.querySelector('.masthead');
       const newContent = view.querySelector('.content');
+
+      if (this.slideUpLinks.includes(url)) {
+        newContent.classList.add('slide-down');
+      }
 
       // TODO: rework this code
       if (newMasthead) {
@@ -64,21 +71,33 @@ class App {
       }
 
       currentContent.innerHTML = newContent.innerHTML;
-      currentContent.className = newContent.className
+      currentContent.className = newContent.className;
 
       // double rAF
       requestAnimationFrame(_ => {
         requestAnimationFrame(_ => {
+          if (this.slideUpLinks.includes(url)) {
+            document.querySelector('.content').classList.remove('slide-down');
+          }
           document.body.classList.remove('hide');
         });
       });
     });
   }
 
-  hideAreas() {
+  hideAreas(url) {
     return new Promise((resolve, reject) => {
       this.pageContent.addEventListener('transitionend', resolve);
       document.body.classList.add('hide');
+    });
+  }
+
+  highlightCurrentLink(url) {
+    this.navLinks.forEach(navLink => {
+      navLink.classList.remove('nav-content-link__active');
+      if (new URL(navLink.href).pathname === url) {
+        navLink.classList.add('nav-content-link__active');
+      }
     });
   }
 
@@ -90,8 +109,10 @@ class App {
     }
     this.currentPath = this.newPath;
 
+    sideNav.close();
+    this.highlightCurrentLink(this.newPath);
     this.loadView(this.newPath)
-      .then(view => this.swapContent(view))
+      .then(view => this.swapContent(view, this.newPath))
       .catch(error => console.warn(error));
   }
 

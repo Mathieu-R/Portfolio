@@ -12,16 +12,6 @@ export function transitionEndPromise(el) {
   });
 };
 
-export function loadStyle(url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(style => {
-      const link = document.createElement('link');
-      link.href = url;
-      document.head.appendChild(link);
-  });
-};
-
 export function loadScript(url) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
@@ -32,4 +22,3 @@ export function loadScript(url) {
     document.body.appendChild(script);
   });
 }
-
