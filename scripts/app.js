@@ -6,10 +6,13 @@ class App {
   constructor() {
     this.currentPath = window.location.pathname;
     this.links = Array.from(document.querySelectorAll('.nav-link'));
-    console.log(this.links);
+    this.pageContent = document.querySelector('.content');
 
+    this.onClickLinks = this.onClickLinks.bind(this);
     this.onChanged = this.onChanged.bind(this);
     this.loadView = this.loadView.bind(this);
+    this.swapContent = this.swapContent.bind(this);
+    this.hideAreas = this.hideAreas.bind(this);
 
     serviceWorkerInstall();
     this.initCustomElements();
@@ -39,38 +42,67 @@ class App {
   }
 
   swapContent(view) {
-    console.log(view);
-    const currentMasthead = document.querySelector('.masthead');
-    const currentContent = document.querySelector('.content');
+    this.hideAreas().then(_ => {
+      this.pageContent.removeEventListener('transitionend', this.onSwapTransitionEnd);
 
-    const newMasthead = view.querySelector('.masthead');
-    const newContent = view.querySelector('.content');
+      const currentMasthead = document.querySelector('.masthead');
+      const currentContent = document.querySelector('.content');
 
-    if (newMasthead) {
-      currentMasthead.innerHTML = newMasthead.innerHTML;
-    }
+      const newMasthead = view.querySelector('.masthead');
+      const newContent = view.querySelector('.content');
 
-    currentContent.innerHTML = newContent.innerHTML;
-    return;
+      // TODO: rework this code
+      if (newMasthead) {
+        if (currentMasthead) {
+          currentMasthead.innerHTML = newMasthead.innerHTML;
+          currentMasthead.className = newMasthead.className;
+        } else {
+          document.body.insertBefore(newMasthead, currentContent);
+        }
+      } else if (!newMasthead && currentMasthead) {
+        document.body.removeChild(currentMasthead);
+      }
+
+      currentContent.innerHTML = newContent.innerHTML;
+      currentContent.className = newContent.className
+
+      // double rAF
+      requestAnimationFrame(_ => {
+        requestAnimationFrame(_ => {
+          document.body.classList.remove('hide');
+        });
+      });
+    });
   }
 
-  onChanged(evt) {
-    evt.preventDefault();
-    this.currentPath = window.location.pathname;
-    const newPath = evt.target.getAttribute('href');
+  hideAreas() {
+    return new Promise((resolve, reject) => {
+      this.pageContent.addEventListener('transitionend', resolve);
+      document.body.classList.add('hide');
+    });
+  }
 
-    if (this.currentPath === newPath) {
+  onChanged() {
+    this.newPath = window.location.pathname;
+
+    if (this.currentPath === this.newPtath) {
       return;
     }
+    this.currentPath = this.newPath;
 
-    history.pushState(null, null, newPath);
-    this.loadView(newPath)
+    this.loadView(this.newPath)
       .then(view => this.swapContent(view))
       .catch(error => console.warn(error));
   }
 
+  onClickLinks(evt) {
+    evt.preventDefault();
+    history.pushState(null, null, evt.target.href);
+    this.onChanged();
+  }
+
   addEventListeners() {
-    this.links.forEach(link => link.addEventListener('click', this.onChanged));
+    this.links.forEach(link => link.addEventListener('click', this.onClickLinks));
     window.addEventListener('popstate', this.onChanged);
   }
 }

@@ -17,3 +17,17 @@ body {
 ul {
   list-style: none;
 }
+
+.content {
+  transition: opacity .3s cubic-bezier(0,0,0.3,1),
+    transform .5s cubic-bezier(0,0,0.3,1);
+}
+
+body.hide .content {
+  opacity: 0;
+}
+
+body.hide-slide-up .content {
+  opacity: 0;
+  transform: translateY(150px);
+}
