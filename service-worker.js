@@ -22,21 +22,41 @@ const ASSETS = [
   '/static/manifest.json'
 ];
 
-self.oninstall = evt => {
+self.oninstall = event => {
   self.skipWaiting();
+  event.waitUntil(async () => {
+    const cache = await caches.open(`${NAME}-${VERSION}`);
+    return cache.addAll(ASSETS);
+  });
 }
 
-self.onactivate = evt => {
+self.onactivate = event => {
   self.clients.claim();
+  event.waitUntil(async () => {
+    const cacheNames = await caches.keys();
+    await Promise.all(
+      cacheNames
+        .map(c => c.split('-'))
+        .filter(c => c[0] !== NAME)
+        .filter(c => c[1] !== VERSION)
+        .map(c => caches.delete(c.join('-')))
+    );
+  });
 }
 
-self.onfetch = evt => {
-  evt.respondWith(fetch(evt.request));
+self.onfetch = event => {
+  event.respondWith(async () => {
+    const response = await caches.match(event.request);
+    if (response) {
+      return response;
+    }
+    fetch(event.request);
+  });
 }
 
-self.onmessage = evt => {
-  if (evt.data === 'version') {
-    evt.source.postMessage({
+self.onmessage = event => {
+  if (event.data === 'version') {
+    event.source.postMessage({
       type: 'version',
       version: VERSION
     });
