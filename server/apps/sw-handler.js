@@ -9,7 +9,10 @@ const production = process.env.NODE_ENV === 'production';
 
 const options = {
   cache: production ? true : false,
-  whitespace: true
+  whitespace: true,
+  helpers: [
+    require('../../helpers/add-hash')
+  ]
 };
 
 const packageJson = JSON.parse(fs.readFileSync('package.json'));
