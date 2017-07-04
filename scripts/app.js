@@ -47,6 +47,7 @@ class App {
 
   swapContent(view, url) {
     this.hideAreas(url).then(_ => {
+      console.log('hidden')
       this.pageContent.removeEventListener('transitionend', this.onSwapTransitionEnd);
 
       const currentMasthead = document.querySelector('.masthead');
