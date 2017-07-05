@@ -1,0 +1,61 @@
+ptf-contact {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 5px 15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 22px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #name, #mail, #subject {
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #888;
+    outline: none;
+    margin-bottom: 8px;
+  }
+
+  #name:focus, #mail:focus, #subject:focus {
+    border-color: #3F51B5;
+  }
+
+  #message {
+    border: 1px solid #000;
+    border-radius: 3px;
+    height: 200px;
+    resize: none;
+    margin-top: 5px;
+  }
+
+  label {
+    color: #555;
+    font-size: 12px;
+  }
+
+  #name, #mail, #subject, #message {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 18px;
+  }
+
+  .send {
+    font-size: 18px;
+    color: #FFF;
+    margin: 10px 5px 5px 5px;
+    height: 40px;
+    width: 120px;
+    border-radius: 3px;
+    border: none;
+    background: #3F51B5;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
