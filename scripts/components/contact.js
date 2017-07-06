@@ -29,9 +29,6 @@ class Contact extends HTMLElement {
       message: this.contactForm.message.value
     };
 
-    console.log(data);
-    return;
-
     if (!('serviceWorker' in navigator && 'SyncManager' in window)) {
       this.sendDirectly(data);
     }
