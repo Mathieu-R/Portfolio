@@ -1,7 +1,8 @@
 import {loadScript} from './utils/utils.js';
 import {serviceWorkerInstall} from './sw-install.js';
-import Toast from './utils/toast.js';
+import Toast from './components/toast.js';
 import sideNav from './components/sidenav.js';
+import Contact from './components/contact.js';
 
 class App {
   constructor() {
@@ -23,12 +24,13 @@ class App {
     this.addEventListeners();
   }
 
-  initCustomElements () {
+  initCustomElements() {
     if (!('customElements' in window)) {
       loadScript('/static/js/third_party/webcomponents-lite.js').then(_ => {
         console.log('custom-elements polyfill added.');
       });
     }
+    customElements.define('ptf-contact', Contact);
   }
 
   loadView(url) {
@@ -47,7 +49,6 @@ class App {
 
   swapContent(view, url) {
     this.hideAreas(url).then(_ => {
-      console.log('hidden')
       this.pageContent.removeEventListener('transitionend', this.onSwapTransitionEnd);
 
       const currentMasthead = document.querySelector('.masthead');

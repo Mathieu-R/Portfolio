@@ -1,4 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import filesize from 'rollup-plugin-filesize';
 import progress from 'rollup-plugin-progress';
@@ -11,6 +12,7 @@ export default {
   plugins: [
     cleanup(),
     resolve(),
+    commonjs();
     babel({
       exclude: 'node_modules/**'
     }),
@@ -21,11 +23,3 @@ export default {
   sourceMap: false
 };
 
-// if you do not use rollup with gulp
-// do not forget to install
-// npm install --save-dev rollup-watch
-// package.json => 'client': 'rollup -c -w'
-
-// vue-rollup-plugin extract automatically css of your Vue components
-// in a bundle.css file
-// only if it is in the components not in a file apart (via src = "...")

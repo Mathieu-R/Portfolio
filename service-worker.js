@@ -1,3 +1,5 @@
+//importScripts('idb-keyval');
+
 const NAME = 'PTF';
 const VERSION = '{version}'
 
@@ -74,7 +76,6 @@ function staleWhileRevalidate(event) {
   }());
 }
 
-
 self.onmessage = event => {
   if (event.data === 'version') {
     event.source.postMessage({
@@ -82,4 +83,35 @@ self.onmessage = event => {
       version: VERSION
     });
   }
+}
+
+self.onsync = event => {
+  if (event.tag === 'bg-contact') {
+    event.waitUntil(sendContactMessage.catch(err => console.error(err)));
+  }
+}
+
+async function sendContactMessage() {
+  const data = await idb.get('contact-infos');
+  const response = await fetch('/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+
+  const responseJson = await response.json();
+
+  if (responseJson.err) {
+    responseJson.err.forEach(err => console.warn(err));
+    return;
+  }
+
+  await registration.showNotification('Portfolio - Message envoyé', {
+    body: responseJson.success,
+    icon: '/static/images/icon@256.png'
+  });
+
+  await idb.delete('contact-infos');
 }

@@ -61,12 +61,184 @@ function serviceWorkerInstall() {
   }).catch(error => console.warn(error));
 }
 
-class sideNav {
-  constructor() {}
+class SideNav {
+  constructor() {
+    this.onTouchStart = this.onTouchStart.bind(this);
+    this.onTouchMove = this.onTouchMove.bind(this);
+    this.onTouchEnd = this.onTouchEnd.bind(this);
+  }
 
   static close() {
     document.querySelector('#toggle_nav').checked = false;
   }
+
+  addEventListeners() {
+    document.addEventListener('touchstart', this.onTouchStart);
+    document.addEventListener('touchmove', this.onTouchMove);
+    document.addEventListener('touchend', this.onTouchEnd);
+  }
+}
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var idbKeyval = createCommonjsModule(function (module) {
+(function() {
+  'use strict';
+  var db;
+
+  function getDB() {
+    if (!db) {
+      db = new Promise(function(resolve, reject) {
+        var openreq = indexedDB.open('keyval-store', 1);
+
+        openreq.onerror = function() {
+          reject(openreq.error);
+        };
+
+        openreq.onupgradeneeded = function() {
+          // First time setup: create an empty object store
+          openreq.result.createObjectStore('keyval');
+        };
+
+        openreq.onsuccess = function() {
+          resolve(openreq.result);
+        };
+      });
+    }
+    return db;
+  }
+
+  function withStore(type, callback) {
+    return getDB().then(function(db) {
+      return new Promise(function(resolve, reject) {
+        var transaction = db.transaction('keyval', type);
+        transaction.oncomplete = function() {
+          resolve();
+        };
+        transaction.onerror = function() {
+          reject(transaction.error);
+        };
+        callback(transaction.objectStore('keyval'));
+      });
+    });
+  }
+
+  var idbKeyval = {
+    get: function(key) {
+      var req;
+      return withStore('readonly', function(store) {
+        req = store.get(key);
+      }).then(function() {
+        return req.result;
+      });
+    },
+    set: function(key, value) {
+      return withStore('readwrite', function(store) {
+        store.put(value, key);
+      });
+    },
+    delete: function(key) {
+      return withStore('readwrite', function(store) {
+        store.delete(key);
+      });
+    },
+    clear: function() {
+      return withStore('readwrite', function(store) {
+        store.clear();
+      });
+    },
+    keys: function() {
+      var keys = [];
+      return withStore('readonly', function(store) {
+        // This would be store.getAllKeys(), but it isn't supported by Edge or Safari.
+        // And openKeyCursor isn't supported by Safari.
+        (store.openKeyCursor || store.openCursor).call(store).onsuccess = function() {
+          if (!this.result) return;
+          keys.push(this.result.key);
+          this.result.continue();
+        };
+      }).then(function() {
+        return keys;
+      });
+    }
+  };
+
+  if ('object' != 'undefined' && module.exports) {
+    module.exports = idbKeyval;
+  } else if (typeof undefined === 'function' && undefined.amd) {
+    undefined('idbKeyval', [], function() {
+      return idbKeyval;
+    });
+  } else {
+    self.idbKeyval = idbKeyval;
+  }
+}());
+});
+
+class Contact extends HTMLElement {
+  static get observedAttributes() {
+    return [];
+  }
+
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.contactForm = this.querySelector('.contact-form');
+    this.onSubmit = this.onSubmit.bind(this);
+    this.contactForm.addEventListener('submit', this.onSubmit);
+  }
+
+  disconnectedCallback() {
+    this.contactForm.removeEventListener('submit', this.onSubmit);
+  }
+
+  async onSubmit(evt) {
+    evt.preventDefault();
+    const data = {
+      name: this.contactForm.fullname.value,
+      mail: this.contactForm.mail.value,
+      subject: this.contactForm.subject.value,
+      message: this.contactForm.message.value
+    };
+
+    console.log(data);
+    return;
+
+    if (!('serviceWorker' in navigator && 'SyncManager' in window)) {
+      this.sendDirectly(data);
+    }
+
+    this.sendInTheBackground(data);
+  }
+
+  async sendInTheBackground(data) {
+    try {
+      await idbKeyval.set('contact-infos', data);
+      const reg = await navigator.serviceWorker.ready;
+      await reg.sync.register('bg-contact');
+      console.log('[SW] Sync registered');
+    } catch (err) {
+      this.sendDirectly(data);
+    }
+  }
+
+  async sendDirectly(data) {
+    const response = await fetch('/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    Toast.Push((await response.text()));
+  }
+
+  attributesChangedCallback(name, oldValue, newValue) {}
 }
 
 class App {
@@ -95,6 +267,7 @@ class App {
         console.log('custom-elements polyfill added.');
       });
     }
+    customElements.define('ptf-contact', Contact);
   }
 
   loadView(url) {
@@ -113,7 +286,6 @@ class App {
 
   swapContent(view, url) {
     this.hideAreas(url).then(_ => {
-      console.log('hidden');
       this.pageContent.removeEventListener('transitionend', this.onSwapTransitionEnd);
 
       const currentMasthead = document.querySelector('.masthead');
@@ -185,7 +357,7 @@ class App {
     this.newPath = window.location.pathname;
     this.currentPath = this.newPath;
 
-    sideNav.close();
+    SideNav.close();
     this.highlightCurrentLink(this.newPath);
     this.loadView(this.newPath).then(view => this.swapContent(view, this.newPath)).catch(error => console.warn(error));
   }

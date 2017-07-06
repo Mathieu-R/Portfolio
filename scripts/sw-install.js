@@ -1,4 +1,4 @@
-import Toast from './utils/toast.js';
+import Toast from './components/toast.js';
 
 export function serviceWorkerInstall() {
   if (!('serviceWorker' in navigator)) {
