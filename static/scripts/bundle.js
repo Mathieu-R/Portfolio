@@ -205,9 +205,6 @@ class Contact extends HTMLElement {
       message: this.contactForm.message.value
     };
 
-    console.log(data);
-    return;
-
     if (!('serviceWorker' in navigator && 'SyncManager' in window)) {
       this.sendDirectly(data);
     }
@@ -235,7 +232,14 @@ class Contact extends HTMLElement {
       body: JSON.stringify(data)
     });
 
-    Toast.Push((await response.text()));
+    const responseJson = await response.json();
+
+    if (responseJson.err) {
+      responseJson.err.forEach(err => console.warn(err));
+      return;
+    }
+
+    Toast.Push(responseJson.success);
   }
 
   attributesChangedCallback(name, oldValue, newValue) {}
