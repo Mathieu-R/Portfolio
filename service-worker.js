@@ -87,13 +87,12 @@ self.onmessage = event => {
 
 self.onsync = event => {
   if (event.tag === 'bg-contact') {
-    console.log('sync begin');
-    event.waitUntil(sendContactMessage);
+    event.waitUntil(sendContactMessage());
   }
 }
 
 async function sendContactMessage() {
-  const data = await idb.get('contact-infos');
+  const data = await idbKeyval.get('contact-infos');
   const response = await fetch('/contact', {
     method: 'POST',
     headers: {
@@ -116,5 +115,5 @@ async function sendContactMessage() {
     icon: '/static/images/icon@256.png'
   });
 
-  await idb.delete('contact-infos');
+  await idbKeyval.delete('contact-infos');
 }
