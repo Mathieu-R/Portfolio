@@ -1,4 +1,4 @@
-//importScripts('idb-keyval');
+importScripts('/static/scripts/third_party/idb-keyval-min.js');
 
 const NAME = 'PTF';
 const VERSION = '{version}'
@@ -87,7 +87,8 @@ self.onmessage = event => {
 
 self.onsync = event => {
   if (event.tag === 'bg-contact') {
-    event.waitUntil(sendContactMessage.catch(err => console.error(err)));
+    console.log('sync begin');
+    event.waitUntil(sendContactMessage);
   }
 }
 
@@ -100,6 +101,8 @@ async function sendContactMessage() {
     },
     body: JSON.stringify(data)
   });
+
+  console.log('sync - data sent');
 
   const responseJson = await response.json();
 
