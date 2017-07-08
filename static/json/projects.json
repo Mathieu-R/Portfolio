@@ -24,14 +24,6 @@
     "status": "DONE"
   },
   {
-    "title": "Progressive Web Poll",
-    "url": "https://github.com/Mathieu-R/Progressive-Web-Poll",
-    "description": "Créez vos sondages en 30 secondes et partagez les avec vos amis.",
-    "tags": ["Service Worker", "NodeJS", "MongoDB", "Preact"],
-    "group": false,
-    "status": "IN DEVELOPPMENT"
-  },
-  {
     "title": "E-Portfolio",
     "url": "https://github.com/Mathieu-R/Portfolio",
     "description": "Le site sur lequelle vous vous trouvez. Il fut l'occasion d'implémenter tout ce que j'ai appris ou voulais apprendre (Server Side Rendering, Service Workers, Cache,...).",
