@@ -15,7 +15,8 @@
     "watch-js": "rollup -wc rollup.config.js",
     "optimize-images": "imageoptim -d static/images",
     "release": "yarn optimize-images && yarn build && yarn bump",
-    "server": "nodemon --inspect server/server.js"
+    "server": "nodemon --inspect server/server.js",
+    "start": "node server/server.js"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",
