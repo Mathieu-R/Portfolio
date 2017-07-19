@@ -251,6 +251,7 @@ class App {
     this.links = Array.from(document.querySelectorAll('.nav-link'));
     this.navLinks = Array.from(document.querySelectorAll('.nav-content-link'));
     this.pageContent = document.querySelector('.content');
+    this.pageContentSections = Array.from(this.pageContent.querySelectorAll('section'));
     this.slideUpLinks = ['/activities', '/projects', '/learning'];
 
     this.onClickLinks = this.onClickLinks.bind(this);
@@ -313,19 +314,20 @@ class App {
       currentContent.innerHTML = newContent.innerHTML;
       currentContent.className = newContent.className;
 
+      this.pageContentSections = Array.from(currentContent.querySelectorAll('section'));
+
       if (this.slideUpLinks.includes(url)) {
-        currentContent.classList.add('slide-down');
-        currentContent.style.willChange = 'transform';
+        this.pageContentSections.forEach(section => {
+          section.classList.add('slide-down');
+          section.style.willChange = 'transform';
+        });
       }
 
       // double rAF
       requestAnimationFrame(_ => {
         requestAnimationFrame(_ => {
           if (this.slideUpLinks.includes(url)) {
-            this.slideBackUp().then(_ => {
-              this.pageContent.style.transition = '';
-              this.pageContent.style.willChange = '';
-            });
+            this.slideBackUp();
           }
           document.body.classList.remove('hide');
         });
@@ -334,10 +336,17 @@ class App {
   }
 
   slideBackUp() {
-    return new Promise((resolve, reject) => {
-      this.pageContent.style.transition = 'opacity .3s cubic-bezier(0,0,0.3,1), transform .5s cubic-bezier(0,0,0.3,1)';
-      this.pageContent.addEventListener('transitionend', resolve);
-      this.pageContent.classList.remove('slide-down');
+    const onSlideTransitionEnd = evt => {
+      const section = evt.target;
+      section.removeEventListener('transitionend', onSlideTransitionEnd);
+      section.style.transition = '';
+      section.style.willChange = '';
+    };
+
+    this.pageContentSections.forEach(section => {
+      section.style.transition = 'opacity .3s cubic-bezier(0,0,0.3,1), transform .5s cubic-bezier(0,0,0.3,1)';
+      section.addEventListener('transitionend', onSlideTransitionEnd);
+      section.classList.remove('slide-down');
     });
   }
 
