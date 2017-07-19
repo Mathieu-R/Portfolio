@@ -57,7 +57,7 @@
       <input type="checkbox" id="toggle_nav" role="button" aria-label="Toggle navigation bar">
       <nav class="nav-container" role="navigation">
         <ul class="nav-content">
-          <li><a class="nav-content-link nav-link" href="/">Home</a></li>
+          <li><a class="nav-content-link nav-link" href="/" aria-label="Home">Home</a></li>
           <li><a class="nav-content-link nav-link" href="/cv">CV</a></li>
           <li><a class="nav-content-link nav-link" href="/activities">Activités</a></li>
           <li><a class="nav-content-link nav-link" href="/projects">Projets</a></li>
