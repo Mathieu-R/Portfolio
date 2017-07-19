@@ -44,7 +44,7 @@
       <input type="text" name="subject" id="subject">
       <label for="message">Message</label>
       <textarea name="message" id="message"></textarea>
-      <button type="submit" class="send" tabindex="0">Send</button>
+      <button type="submit" class="send" tabindex="0" aria-label="Send message to admin">Send</button>
     </form>
   </ptf-contact>
 </main>

@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "mathieu-rousseau",
   "version": "1.0.6",
   "description": "Portfolio - Ephec",
   "main": "server/server.js",
@@ -7,8 +7,9 @@
     "test": "lighthouse localhost:3000",
     "bump": "npm version patch",
     "build": "yarn build-css && yarn build-js",
+    "now-build": "npm run build-css && npm run build-js",
     "create-css-folder": "mkdirp static/styles",
-    "build-css": "yarn create-css-folder && node-sass sass/ -o static/styles/ && node ./build/clean-css",
+    "build-css": "npm run create-css-folder && node-sass sass/ -o static/styles/ && node ./build/clean-css",
     "build-js": "rollup -c rollup.config.production.js",
     "watch": "parallelshell \"yarn watch-js\" \"yarn watch-css\"",
     "watch-css": "yarn create-css-folder && node-sass -w sass/ -o static/styles/",
@@ -16,7 +17,7 @@
     "optimize-images": "imageoptim -d static/images",
     "release": "yarn optimize-images && yarn build && yarn bump",
     "server": "nodemon --inspect server/server.js",
-    "start": "node server/server.js"
+    "now-start": "node server/server.js"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",

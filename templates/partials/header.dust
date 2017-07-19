@@ -54,7 +54,7 @@
         <a class="logo nav-link" href="/"></a>
       </div>
       <label for="toggle_nav" class="toggle_nav-label" aria-label="toggle_nav"></label>
-      <input type="checkbox" id="toggle_nav" role="button">
+      <input type="checkbox" id="toggle_nav" role="button" aria-label="Toggle navigation bar">
       <nav class="nav-container" role="navigation">
         <ul class="nav-content">
           <li><a class="nav-content-link nav-link" href="/">Home</a></li>

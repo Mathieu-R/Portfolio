@@ -6,10 +6,6 @@
   <section class="learning-container">
     <div class="inner-learning">
       <div class="learning-image-container">
-        <!-- not definitive, could move link another place later -->
-        <!--<a href="{url}" class="learning-image-link">
-          <img src="{image}" alt="{title}" class="learning-image-content">
-        </a>-->
       </div>
       <h3 class="learning-title">{title}</h3>
       <div class="learning-description-container">
@@ -33,7 +29,7 @@
         </ul>
       </div>
       <div class="learning-buttons-container">
-        <button class="learning-url-content" tabindex="0"><a href="{url}">explore</a></button>
+        <button class="learning-url-content" tabindex="0" aria-label="Explore the website"><a href="{url}">explore</a></button>
       </div>
     </div>
   </section>
