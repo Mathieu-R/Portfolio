@@ -12,7 +12,7 @@ export default {
   plugins: [
     cleanup(),
     resolve(),
-    commonjs();
+    commonjs(),
     babel({
       exclude: 'node_modules/**'
     }),
