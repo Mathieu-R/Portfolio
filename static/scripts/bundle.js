@@ -42,6 +42,9 @@ function serviceWorkerInstall() {
     }
   };
   navigator.serviceWorker.register('/sw.js', { 'scope': '/' }).then(reg => {
+    if ('SyncManager' in window) {
+      reg.pushManager.getSubscription();
+    }
     reg.onupdatefound = evt => {
       console.log('A new service worker has been found, installing...');
       reg.installing.onstatechange = evt => {
