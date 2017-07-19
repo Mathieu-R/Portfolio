@@ -17,6 +17,7 @@ const staticPath = './static'
 const swPath = './service-worker.js';
 
 app.use(removeHash);
+app.use(validator());
 app.use(compression());
 app.use(bodyParser.json());
 app.use('/static', serveStatic(staticPath, {
