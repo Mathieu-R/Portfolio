@@ -184,7 +184,6 @@ function serviceWorkerInstall() {
       console.log('A new service worker has been found, installing...');
 
       reg.installing.onstatechange = function (evt) {
-        // as the service worker is installed, we can push the message
         if (evt.target.state === 'activated') {
           reg.active.postMessage('version');
         }
@@ -477,7 +476,7 @@ function () {
         var currentMasthead = document.querySelector('.masthead');
         var currentContent = document.querySelector('.content');
         var newMasthead = view.querySelector('.masthead');
-        var newContent = view.querySelector('.content'); // TODO: rework this code
+        var newContent = view.querySelector('.content');
 
         if (newMasthead) {
           if (currentMasthead) {
@@ -499,8 +498,7 @@ function () {
             section.classList.add('slide-down');
             section.style.willChange = 'transform';
           });
-        } // double rAF
-
+        }
 
         requestAnimationFrame(function (_) {
           requestAnimationFrame(function (_) {

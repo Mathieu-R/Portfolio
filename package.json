@@ -7,7 +7,6 @@
     "test": "lighthouse localhost:3000",
     "bump": "npm version patch",
     "build": "yarn build-css && yarn build-js",
-    "now-build": "npm run build-css && npm run build-js",
     "create-css-folder": "mkdirp static/styles",
     "build-css": "npm run create-css-folder && node-sass sass/ -o static/styles/ && node ./build/clean-css",
     "build-js": "rollup -c rollup.config.production.js",
@@ -17,8 +16,9 @@
     "optimize-images": "imageoptim -d static/images",
     "release": "yarn optimize-images && yarn build && yarn bump",
     "server": "nodemon --inspect server/server.js",
-    "prod": "yarn now-build && yarn now-start",
-    "now-start": "NODE_ENV=production node server/server.js"
+    "prod": "yarn start",
+    "start": "NODE_ENV=production node server/server.js",
+    "postinstall": "yarn build"
   },
   "repository": "git@github.com:Mathieu-R/Portfolio.git",
   "author": "Mathieu-R <mathieu0709@gmail.com>",
