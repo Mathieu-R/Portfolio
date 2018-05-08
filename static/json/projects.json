@@ -16,9 +16,9 @@
     "status": "DONE"
   },
   {
-    "title": "Webpack2 - Boilerplate",
+    "title": "preact-starter",
     "url": "https://github.com/Mathieu-R/webpack2-boilerplate",
-    "description": "Template pour Webpack 2 entièrement customisable. Réalisé pour Preact mais toutefois utilisable (moyennant quelques modifications) avec d'autre frameworks tels que VueJS,...",
+    "description": "Template pour Webpack 4 entièrement customisable. Réalisé pour Preact mais toutefois utilisable (moyennant quelques modifications) avec d'autre frameworks tels que VueJS,...",
     "tags": ["Javascript", "Webpack2"],
     "group": false,
     "status": "DONE"

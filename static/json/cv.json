@@ -1,6 +1,10 @@
 {
   "Formation": [
     {
+      "date": "12 Février - 18 Mai 2018",
+      "description": "Stage en entreprise - The Great Circle, Rixensart."
+    },
+    {
       "date": "2015-2018",
       "description": "Baccalauréat en Technologie de l’informatique à l’EPHEC (École Pratique des Hautes Etudes Commerciales) de Louvain-la-Neuve."
     },
@@ -36,7 +40,7 @@
         "HTML 5, CSS 3, Javascript (ES5, ES 201X).",
         "Préprocesseur Sass.",
         "Outils de « bundling » (Webpack, Gulp, Rollup).",
-        "Frameworks AngularJS, VueJS, Preact (ReactJS)."
+        "Frameworks AngularJS, VueJS, React."
       ],
 
       "Back": [

@@ -27,7 +27,7 @@ app.use('/static', serveStatic(staticPath, {
 app.use('/sw.js', require('./apps/sw-handler'));
 app.use('/', require('./apps/views-handler'));
 app.get('/check', res => res.send('server ok.'));
-app.post('/contact', validateMessage, async (req, res) => {
+app.post('/contact', async (req, res) => {
   try {
     const info = await sendMail(req.body);
     res.status(200).json({success: 'Message envoyé à Mathieu Rousseau.'});

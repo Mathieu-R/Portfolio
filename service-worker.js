@@ -91,29 +91,38 @@ self.onsync = event => {
   }
 }
 
+self.onnotificationclick = event => {
+  // close notification
+  event.notification.close();
+  // redirect user
+  clients.openWindow(`${location.origin}/`);
+}
+
 async function sendContactMessage() {
-  const data = await idbKeyval.get('contact-infos');
-  const response = await fetch('/contact', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
+  try {
+    const data = await idbKeyval.get('contact-infos');
+    const response = await fetch('/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
 
-  console.log('sync - data sent');
+    const responseJson = await response.json();
 
-  const responseJson = await response.json();
+    if (responseJson.err) {
+      responseJson.err.forEach(err => console.warn(err));
+      return;
+    }
 
-  if (responseJson.err) {
-    responseJson.err.forEach(err => console.warn(err));
-    return;
+    await registration.showNotification('Portfolio - Message envoyé', {
+      body: responseJson.success,
+      icon: '/static/images/icon@256.png'
+    });
+
+    await idbKeyval.delete('contact-infos');
+  } catch (err) {
+    console.error(err);
   }
-
-  await registration.showNotification('Portfolio - Message envoyé', {
-    body: responseJson.success,
-    icon: '/static/images/icon@256.png'
-  });
-
-  await idbKeyval.delete('contact-infos');
 }

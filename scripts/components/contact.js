@@ -1,4 +1,4 @@
-import idb from 'idb-keyval';
+import { set } from 'idb-keyval';
 import Toast from './toast.js';
 
 class Contact extends HTMLElement {
@@ -38,8 +38,13 @@ class Contact extends HTMLElement {
 
   async sendInTheBackground(data) {
     try {
-      await idb.set('contact-infos', data);
       const reg = await navigator.serviceWorker.ready;
+      if (!reg.active) {
+        return;
+      }
+
+      await Notification.requestPermission();
+      await set('contact-infos', data);
       await reg.sync.register('bg-contact');
       console.log('[SW] Sync registered');
     } catch(err) {

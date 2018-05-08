@@ -14,9 +14,9 @@ function readFileContent(path) {
 
 function createHash(content) {
   return crypto
-      .createHash('sha256')
-      .update(content)
-      .digest('hex');
+    .createHash('sha256')
+    .update(content)
+    .digest('hex');
 }
 
 function hash(dust) {

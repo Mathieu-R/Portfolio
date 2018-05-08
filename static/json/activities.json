@@ -32,5 +32,18 @@
     "tags": ["Development", "Java", "Technofutur"],
     "startDate": "2017-07-31",
     "endDate": "2017-08-04"
+  },
+  {
+    "title": "Formation C#, APS.net - Avancé",
+    "description": "Formation sur des notions avancées de C#. Notamment sur l'ASP.net.",
+    "tags": ["Development", "ASP.net", "Technofutur"],
+    "startDate": "2017-07-31",
+    "endDate": "2017-08-04"
+  },
+  {
+    "title": "Hackages - React Native",
+    "description": "Hackjam. Il s'agissait d'une introduction à React-Native",
+    "tags": ["Development", "React-Native", "Mobile"],
+    "startDate": "2018-04-18"
   }
 ]
