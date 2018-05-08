@@ -1,6 +1,6 @@
 {
   "name": "mathieu-rousseau",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Portfolio - Ephec",
   "main": "server/server.js",
   "scripts": {
