@@ -1,5 +1,4 @@
 .cv-container {
-
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10px;
@@ -74,5 +73,27 @@
   .computer-science-web-back-title,
   .computer-science-web-database-title {
     font-size: 22px;
+  }
+
+  .download-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none;
+      color: #000;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    &-svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 }

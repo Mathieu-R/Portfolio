@@ -1,5 +1,6 @@
 const http = require('http');
 const path = require('path');
+const fs = require('fs');
 const validator = require('express-validator');
 const bodyParser = require('body-parser');
 const serveStatic = require('serve-static');
@@ -27,6 +28,12 @@ app.use('/static', serveStatic(staticPath, {
 app.use('/sw.js', require('./apps/sw-handler'));
 app.use('/', require('./apps/views-handler'));
 app.get('/check', res => res.send('server ok.'));
+
+app.get('/download-cv.pdf', (req, res) => {
+  const stream = fs.createReadStream(path.join(__dirname, 'CV.pdf'));
+  stream.pipe(res);
+});
+
 app.post('/contact', async (req, res) => {
   try {
     const info = await sendMail(req.body);
