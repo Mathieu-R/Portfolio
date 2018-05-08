@@ -1,5 +1,29 @@
 [
   {
+    "title": "Streamwave",
+    "url": "https://github.com/Mathieu-R/streamwave",
+    "description": "Il s'agit de mon TFE. Une Progressive Web App complètement 'bleeding-edge' de streaming musical",
+    "tags": ["PWA", "Preact", "Streaming", "Music"],
+    "group": false,
+    "status": "IN DEVELOPMENT"
+  },
+  {
+    "title": "Coordinates-parser",
+    "url": "https://github.com/Mathieu-R/coordinates-parser",
+    "description": "Petite libraire réalisée de le cadre de mon stage chez Great Circle permettant de convertir un couple latitude/longitude au format DMC (degrées, minutes, centiminutes) et inversément",
+    "tags": ["Typescript", "Librairie", "Coordinates", "Sailing"],
+    "group": false,
+    "status": "DONE"
+  },
+  {
+    "title": "Keyboard-Scale-Trainer",
+    "url": "https://github.com/Mathieu-R/keyboard-scale-trainer",
+    "description": "Progressive Web App pour musiciens. Elle permet de s'entrainer aux gammes et aux accords",
+    "tags": ["PWA", "VueJS", "SSR", "Musician"],
+    "group": false,
+    "status": "DONE"
+  },
+  {
     "title": "Agenda-Rails",
     "url": "https://github.com/Mathieu-R/agenda-rails",
     "description": "Agenda disponible sans authentification (pour la simplicité), il suffit simplement d'entrer son nom et ensuite de noter des rendez-vous et de les tagger selon leurs niveux d'importance.",
@@ -17,9 +41,9 @@
   },
   {
     "title": "preact-starter",
-    "url": "https://github.com/Mathieu-R/webpack2-boilerplate",
+    "url": "https://github.com/Mathieu-R/preact-starter",
     "description": "Template pour Webpack 4 entièrement customisable. Réalisé pour Preact mais toutefois utilisable (moyennant quelques modifications) avec d'autre frameworks tels que VueJS,...",
-    "tags": ["Javascript", "Webpack2"],
+    "tags": ["Javascript", "Webpack4"],
     "group": false,
     "status": "DONE"
   },
@@ -29,7 +53,7 @@
     "description": "Le site sur lequelle vous vous trouvez. Il fut l'occasion d'implémenter tout ce que j'ai appris ou voulais apprendre (Server Side Rendering, Service Workers, Cache,...).",
     "tags": ["Service Worker", "NodeJS", "Server Side Rendering"],
     "group": false,
-    "status": "IN DEVELOPPMENT"
+    "status": "DONE"
   },
   {
     "title": "WebIRC",

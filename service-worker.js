@@ -1,7 +1,8 @@
 importScripts('/static/scripts/third_party/idb-keyval-min.js');
 
-const NAME = 'PTF';
-const VERSION = '{version}'
+const NAME = 'Portfolio';
+const VERSION = '{version}';
+const CACHE_NAME = `${NAME}-${VERSION}`;
 
 const ASSETS = [
   '/',
@@ -26,7 +27,7 @@ const ASSETS = [
 
 self.oninstall = event => {
   event.waitUntil(
-    caches.open(`${NAME}-${VERSION}`)
+    caches.open(CACHE_NAME)
       .then(cache => cache.addAll(ASSETS))
   );
   return self.skipWaiting();
@@ -47,7 +48,12 @@ self.onactivate = event => {
 }
 
 self.onfetch = event => {
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+    return;
+  }
+
   const url = new URL(event.request.url);
+
   if (url.pathname.startsWith('/static/')) {
     event.respondWith(caches.match(event.request));
     return;
@@ -68,7 +74,7 @@ function staleWhileRevalidate(event) {
   event.waitUntil(async function() {
     try {
       const fetchResponse = await fetch(event.request);
-      const cache = await caches.open(`${NAME}-${VERSION}`);
+      const cache = await caches.open(CACHE_NAME);
       await cache.put(event.request, fetchResponse.clone());
     } catch(err) {
       console.error(err);

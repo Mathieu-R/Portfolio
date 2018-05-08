@@ -5,9 +5,12 @@ import filesize from 'rollup-plugin-filesize';
 import progress from 'rollup-plugin-progress';
 
 export default {
-  entry: 'scripts/app.js',
-  dest: 'static/scripts/bundle.js',
-  format: 'cjs',
+  input: 'scripts/app.js',
+  output: {
+    file: 'static/scripts/bundle.js',
+    format: 'cjs',
+    sourceMap: true
+  },
   plugins: [
     resolve(),
     commonjs(),
@@ -16,6 +19,5 @@ export default {
     }),
     filesize(),
     progress()
-  ],
-  sourceMap: true
+  ]
 };

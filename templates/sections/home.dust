@@ -12,6 +12,20 @@
 <main class="content">
   <section class="presentation">
     <p>
+      Bonjour, je suis un jeune étudiant et développeur web Belge. J'ai le desgin même si cela n'est pas mon job ni ne fait partie des mes études.
+      J'aime le Web et je suis à cet instant même intéressé par la WebVR, les Services-Workers et les Progressives Web Apps (PWA).
+    </p>
+    <p>
+      Autrement, j'aime le sport et particulièrement l'athlétisme, je cours durant mon temps-libre. Je pense qu'il est important de bouger et d'être en forme
+      et nous en tant que développeurs et informaticiens devont lutter contre l'inactivité.
+    </p>
+    <p>
+      Enfin, j'aime énormément la musique. C'est une grande passion pour moi. Je joue personnellement du piano, c'est un talent que j'ai reçu.
+      J'aime beaucoup le gospel et la musique africaine (Congolaise, Nigérianne,...). Ces musiques rendent vraiment de bonne humeur.
+      Voilà, je pense que j'en ai assez dit pour me présenter. Passez une agréable visite sur mon site.
+    </p>
+    <hr class="presentation-separator">
+    <p>
       Hi! I'm a young Student Web Developper from Belgium. I'm a design enthusiast even if it's not my job nor a part of my studies.
       I love the Web and I'm currently exited about WebVR, Service Workers and Progressive Web Apps (PWA).
     </p>
@@ -21,7 +35,7 @@
     </p>
     <p>
       Lastly, I'm a music enthusiast, I personnaly play the piano, it's a talent i've been gifted
-      and love gospel music and african song. It gets you so much in the mood! Anyway, I think it's quiet enough for you to know me.
+      and love gospel music and african songs. It gets you so much in the mood! Anyway, I think it's quiet enough for you to know me.
     </p>
   </section>
 

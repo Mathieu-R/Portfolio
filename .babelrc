@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 0.25%"]
+      },
+      "exclude": ["transform-regenerator", "transform-async-to-generator"]
+    }]
+  ],
+  "plugins": [
+    ["module:fast-async", {
+      "compiler": {
+        "promises": true,
+        "generators": false
+      },
+      "spec": true
+    }]
+  ]
+}

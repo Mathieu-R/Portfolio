@@ -6,9 +6,12 @@ import progress from 'rollup-plugin-progress';
 import cleanup from 'rollup-plugin-cleanup'; // production
 
 export default {
-  entry: 'scripts/app.js',
-  dest: 'static/scripts/bundle.js',
-  format: 'cjs',
+  input: 'scripts/app.js',
+  output: {
+    file: 'static/scripts/bundle.js',
+    format: 'cjs',
+    sourceMap: false
+  },
   plugins: [
     cleanup(),
     resolve(),
@@ -17,9 +20,7 @@ export default {
       exclude: 'node_modules/**'
     }),
     filesize(),
-    progress(),
-
-  ],
-  sourceMap: false
+    progress()
+  ]
 };
 

@@ -3,7 +3,8 @@
     "title": "Défense des projets d'intégrations (3TI)",
     "description": "J'ai eu l'occasion de pouvoir assister à la défense des projets d'intégrations des 3TI à l'Axis Park, Louvain-La-Neuve. Ces projets visent à intégrer plusieurs cours.",
     "tags": ["Integration Project", "3TI", "Yep"],
-    "startDate": "2016-12-13"
+    "startDate": "2016-12-13",
+    "analyse": ""
   },
   {
     "title": "Semaine Internationale Makers",
@@ -34,11 +35,23 @@
     "endDate": "2017-08-04"
   },
   {
-    "title": "Formation C#, APS.net - Avancé",
+    "title": "Formation C#, ASP.net - Avancé",
     "description": "Formation sur des notions avancées de C#. Notamment sur l'ASP.net.",
     "tags": ["Development", "ASP.net", "Technofutur"],
     "startDate": "2017-07-31",
     "endDate": "2017-08-04"
+  },
+  {
+    "title": "Conférence Key Performance",
+    "description": "Conférence sur la performance des sites-web",
+    "tags": ["Performance"],
+    "startDate": "2017-10-10"
+  },
+  {
+    "title": "Conférence Assyst Europe",
+    "description": "Présentation du stage proposé chez Assyst Europe",
+    "tags": ["Stage"],
+    "startDate": "2017-11-09"
   },
   {
     "title": "Hackages - React Native",
