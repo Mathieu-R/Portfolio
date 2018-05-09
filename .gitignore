@@ -6,3 +6,4 @@ static/scripts/bundle.js
 static/scripts/bundle.js.map
 static/others/CV.docx
 .env
+*.log
