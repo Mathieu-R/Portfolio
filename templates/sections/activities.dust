@@ -11,6 +11,12 @@
           {description}
         </p>
       </div>
+      <div class="activity-analyse-container">
+        <h4>Analyse réflective</h4>
+        <div class="activity-analyse-content">
+          {@markdown}{analyse}{/markdown}
+        </div>
+      </div>
       <div class="activity-tags-container">
         <h4>Technologies</h4>
         <ul class="activity-tags-list">
