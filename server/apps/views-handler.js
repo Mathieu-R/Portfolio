@@ -114,7 +114,7 @@ const analyses = [
       qui ralentissaient les sites-webs et les différents outils qui permettent de mesurer
       les performances d'un site web.
 
-      J'ai trouvé cela intéressant car cela nous sensibilisait au fait
+      J'ai trouvé cette conférence intéressante car cela nous sensibilisait au fait
       qu'il est important qu'un site soit rapide afin d'offrir une bonne expérience utilisateur.
 
       Toutefois, je trouvais que cela manquait de véritable solutions pour améliorer
@@ -145,6 +145,7 @@ const analyses = [
 
       J'étais donc un peu déçu même s'il est vrai qu'avec 2h, on avait pas beaucoup de temps
       pour réaliser un véritable hackaton.
+      De plus le setup des différents outils ne s'est pas avéré facile ce qui nous a fait perdre un peu de temps.
 
       Toutefois, cela m'a permit de découvrir React-Native et j'ai personnellement
       trouver cela très sympa et très prometteur.
@@ -152,6 +153,26 @@ const analyses = [
 
       De plus, cela m'a permis d'apprendre certaines choses à d'autres personnes moins
       ou pas habituées à l'univers React.
+    `
+  },
+  {
+    title: "Formation Sono",
+    analyse: `
+      J'ai eu l'occasion de participer à une formation sono.
+      Cette formation nous a appris à tout d'abord cabler tout une installation sono, à bien "rouler" les cables
+      ce qui est très important. En effet, la plupart des personnes le font mal (j'ai peu remarquer que c'étais mon cas)
+      ce qui a tendance à abimer le cable. Il y a une technique précise pour l'enrouler de façon correcte.
+      Nous avons également appris qu'étaient et à quoi servaient les différents éléments constituants d'une sono
+      tels que les DI box, le multipair, les cables jack, xlr,...
+
+      Ensuite, nous avons appris à nous servir d'une table de mixage (du moins les bases) mais également tout une partie
+      beaucoup plus théorique sur le son en générale.
+
+      Cette partie m'a rappelé certaines choses que j'ai pu apprendre à l'Ephec tel que la notion d'impédance,...
+
+      J'ai trouvé cela très intéressant car en tant que musicien je pense que c'est un skill important à avoir.
+      J'étais toujours frustré de ne pas comprendre ce qui se passait au niveau de la sono et de ne pas
+      être capable d'utiliser une table de mixage.
     `
   }
 ];
