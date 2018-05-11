@@ -57,5 +57,12 @@
     "description": "Hackjam. Il s'agissait d'une introduction à React-Native",
     "tags": ["Development", "React-Native", "Mobile"],
     "startDate": "2018-04-18"
+  },
+  {
+    "title": "Formation Sono",
+    "description": "Fomation sono destinée à apprendre les bases de la sonorisation",
+    "tags": ["Sono", "Musique"],
+    "startDate": "2018-03-03",
+    "endDate": "2018-04-28"
   }
 ]
