@@ -33,6 +33,7 @@
     "es6-promisify": "^6.0.0",
     "express": "^4.15.2",
     "express-validator": "^5.2.0",
+    "heroku-ssl-redirect": "^0.0.4",
     "idb-keyval": "^3.0.3",
     "marked": "^0.3.19",
     "mz": "^2.6.0",

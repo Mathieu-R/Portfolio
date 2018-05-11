@@ -10,6 +10,7 @@ const app = express();
 const dotenv = require('dotenv').config();
 const nodemailer = require('nodemailer');
 const promisify = require('es6-promisify');
+const ssl = require('heroku-ssl-redirect');
 const removeHash = require('../middlewares/remove-hash');
 
 const production = process.env.NODE_ENV === 'production';
@@ -21,6 +22,7 @@ app.use(removeHash);
 app.use(validator());
 app.use(compression());
 app.use(bodyParser.json());
+app.use(ssl());
 app.use('/static', serveStatic(staticPath, {
   maxAge: production ? (365 * 24 * 60 * 60 * 1000) : 0
 }));
